@@ -27,7 +27,10 @@
 			<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-icon-touch.png" rel="apple-touch-icon" />	
 	    <?php } ?>
-
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.typekit.net/ida3khk.css">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php wp_head(); ?>
@@ -35,18 +38,27 @@
 	</head>
 			
 	<body <?php body_class(); ?>>
-
-		<div class="off-canvas-wrapper">
+				
+		<header class="header" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
+			
+			<div class="grid-container fluid">
+				<div class="grid-x grid-padding-x">
+					<div class="cell">
+					
+						 <!-- This navs will be applied to the topbar, above all content 
+							  To see additional nav styles, visit the /parts directory -->
+						 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
+		
+					</div>
+				</div>
+			</div>
+			 	
+		</header> <!-- end .header -->
+		
+		
+		<div class="off-canvas-wrapper<?php if( $color_theme = get_field('color_theme')):?>theme-<?php echo $color_theme;?><?php endif;?>)">
 			
 			<!-- Load off-canvas container. Feel free to remove if not using. -->			
 			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
 			
 			<div class="off-canvas-content" data-off-canvas-content>
-				
-				<header class="header" role="banner">
-							
-					 <!-- This navs will be applied to the topbar, above all content 
-						  To see additional nav styles, visit the /parts directory -->
-					 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
-	 	
-				</header> <!-- end .header -->

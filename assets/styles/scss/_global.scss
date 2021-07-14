@@ -4,6 +4,31 @@ Stylesheet: Global Stylesheet
 
 *************************************************/
 
+.has-bg {
+	position: relative;
+	
+	.bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	
+	.grid-container {
+		position: relative;
+	}
+	
+}
+
+button,
+.button {
+	letter-spacing: 5px;
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
