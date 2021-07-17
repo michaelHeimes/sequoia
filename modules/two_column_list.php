@@ -3,13 +3,13 @@
 		<div class="grid-x grid-padding-x">
 
 			<?php if( $heading = get_sub_field('heading') ):?>
-			<div class="heading-wrap cell small-12 medium-12 tablet-10 tablet-offset-1">
+			<div class="heading-wrap cell small-12 medium-12 tablet-10 tablet-offset-1 text-center">
 				<h2><?php echo $heading;?></h2>
 			</div>
 			<?php endif;?>
 			
 			<?php if( $copy = get_sub_field('copy') ):?>
-			<div class="copy-wrap cell small-12 medium-12 tablet-10 tablet-offset-1">
+			<div class="copy-wrap cell small-12 medium-12 tablet-10 tablet-offset-1 text-center">
 				<?php echo $copy;?>
 			</div>
 			<?php endif;?>

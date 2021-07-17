@@ -1,6 +1,18 @@
 header.header {
-
+	z-index: 5;
+	background-color: $brand-green;
 	transition: transform .5s ease;
+		
+	a {
+		color: $white;
+	}
+	
+	.top-bar-util {
+		background-color: #02532C;
+		ul#utility-nav {
+		    justify-content: flex-end;
+		}
+	}
 		
 }
 

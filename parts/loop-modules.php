@@ -8,12 +8,6 @@
 	
 	endif;?>
 
-	<?php if ( get_row_layout() == 'mailing_list_signup' ) : 
-	
-		get_template_part('modules/mailing_list_signup');
-	
-	endif;?>
-
 	<?php if ( get_row_layout() == 'recent_news' ) : 
 	
 		get_template_part('modules/recent_news');
@@ -32,6 +26,18 @@
 	
 	endif;?>
 
+	<?php if ( get_row_layout() == 'team_members' ) : 
+	
+		get_template_part('modules/team_members');
+	
+	endif;?>
+
+	<?php if ( get_row_layout() == 'testimonial_slider' ) : 
+	
+		get_template_part('modules/testimonial_slider');
+	
+	endif;?>
+
 	<?php if ( get_row_layout() == 'three_column_stats' ) : 
 	
 		get_template_part('modules/three_column_stats');
@@ -40,7 +46,7 @@
 
 	<?php if ( get_row_layout() == 'two_column_list' ) : 
 	
-		get_template_part('modules/three_column_stats');
+		get_template_part('modules/two_column_list');
 	
 	endif;?>
 

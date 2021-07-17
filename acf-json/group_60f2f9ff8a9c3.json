@@ -1,0 +1,43 @@
+{
+    "key": "group_60f2f9ff8a9c3",
+    "title": "Hide Mailing List Signup",
+    "fields": [
+        {
+            "key": "field_60f2fa0b4b35b",
+            "label": "Hide Mailing List Signup",
+            "name": "hide_mailing_list_signup",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1626536942
+}
