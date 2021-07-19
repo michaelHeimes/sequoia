@@ -26,24 +26,35 @@
 				<footer class="footer green-bg" role="contentinfo">
 					<div class="grid-container">
 						
+						<div class="logo-wrap text-center"><a href="<?php echo home_url(); ?>">
+							<?php 
+							$image = get_field('footer_logo', 'option');
+							if( !empty( $image ) ): ?>
+							    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+							<?php endif; ?>							
+						</a></div>
+						
 						<div class="inner-footer grid-x grid-padding-x">
 							
-							<div class="left cell small-12 medium-12 tablet-6">
+							<div class="left cell small-12 medium-7 tablet-6">
 								<nav role="navigation">
 		    						<?php joints_footer_links(); ?>
 		    					</nav>
 		    				</div>
 	
-							<div class="right cell small-12 medium-12 tablet-6">
-								<nav role="navigation grid-x grid-padding-x">
-		    						<div class="cell small-12 medium-6">
-			    						<div>Phone: <?php the_field('phone_number', 'option');?><a href="tel:"><?php the_field('phone_number', 'option');?></a></div>
+							<div class="right cell small-12 medium-5 tablet-6">
+								<nav role="navigation" class="contact-links grid-x grid-padding-x">
+									
+		    						<div class="ffe-wrap cell small-12 tablet-6">
+			    						<div>Phone: <a href="tel:<?php the_field('phone_number', 'option');?>"><?php the_field('phone_number', 'option');?></a></div>
 			    						<div>Fax: <?php the_field('fax_number', 'option');?></div>
-			    						<div>Email: <a href="mailto:<?php the_field('email', 'option');?>"><?php the_field('email', 'option');?></a></div>
+			    						<div>Email: <a href="mailto:<?php the_field('email_address', 'option');?>"><?php the_field('email_address', 'option');?></a></div>
 		    						</div>
-		    						<div class="cell small-12 medium-6">
-			    						<a href="<?php the_field('directions_url', 'option');?>" target="_blank"><?php the_field('address', 'option');?></a>
+		    						
+		    						<div class="cell small-12 tablet-6">
+			    						<a class="directions-link" href="<?php the_field('directions_url', 'option');?>" target="_blank"><?php the_field('address', 'option');?></a>
 		    						</div>
+		    						
 		    						<div class="social-links cell small-12">
 			    						<div class="grid-x grid-padding-x">
 				    						<div class="cell shrink"><a href="<?php the_field('facebook_url', 'option');?>" target="_blank">

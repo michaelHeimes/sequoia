@@ -1,8 +1,15 @@
+.home .banner {
+	min-height: 507px;
+	padding-top: 4.7rem;
+}
+
 .banner {
 	color: $white;
 	
 	h1 {
 		color: $white;
+		font-weight: bold;
+		padding-bottom: .31em;
 	}
 	
 }

@@ -20,11 +20,11 @@
 			        'posts_per_page' => -1,
 			    );
 			
-			    $loop = new WP_Query( $args ); $i = 0;
+			    $loop = new WP_Query( $args );
 			        
 			    while ( $loop->have_posts() ) : $loop->the_post();?>
 	
-					<li class="accordion-item<?php if($i==0):?> is-active<?php endif; $i++;?>" data-accordion-item>
+					<li class="accordion-item" data-accordion-item>
 							
 						<a href="#" class="accordion-title">
 							<div class="grid-x grid-padding-x">

@@ -4,6 +4,20 @@ Stylesheet: Global Stylesheet
 
 *************************************************/
 
+/*********************
+TYPOGRAPHY
+*********************/
+.small-heading,
+h2.small-heading,
+.h2.smll-heading,
+h3.small-heading,
+.h3.small-heading {
+	
+}
+
+/*********************
+COMMON ELEMENTS
+*********************/
 .has-bg {
 	position: relative;
 	
@@ -26,6 +40,7 @@ Stylesheet: Global Stylesheet
 
 button,
 .button {
+	font-weight: 400;
 	letter-spacing: 5px;
 }
 

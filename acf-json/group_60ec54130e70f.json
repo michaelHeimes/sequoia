@@ -16,6 +16,56 @@
                 "id": ""
             },
             "layouts": {
+                "layout_60f3740e90fce": {
+                    "key": "layout_60f3740e90fce",
+                    "name": "contact_form",
+                    "label": "Contact Form",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60f3741890fcf",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60f3741d90fd0",
+                            "label": "Gravity Form ID",
+                            "name": "gravity_form_id",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_60ec56178eccb": {
                     "key": "layout_60ec56178eccb",
                     "name": "copy_with_dual_heading_styles",
@@ -93,6 +143,54 @@
                                 "id": ""
                             },
                             "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60f373e490fcb": {
+                    "key": "layout_60f373e490fcb",
+                    "name": "location_and_contact_info",
+                    "label": "Location and Contact Info",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60f373f490fcc",
+                            "label": "Location Heading",
+                            "name": "location_heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60f373ff90fcd",
+                            "label": "Contact Heading",
+                            "name": "contact_heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -1104,5 +1202,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1626553016
+    "modified": 1626568641
 }

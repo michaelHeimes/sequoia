@@ -9,6 +9,16 @@ function prefix_disable_gutenberg($current_status, $post_type)
     return $current_status;
 }
 
+//Page Slug Body Class
+function add_slug_body_class( $classes ) {
+global $post;
+if ( isset( $post ) ) {
+$classes[] = $post->post_type . '-' . $post->post_name;
+}
+return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );
+
 // ACF Options
 add_action( 'after_setup_theme', 'joints_theme_support' );
 

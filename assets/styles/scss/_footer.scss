@@ -1,0 +1,113 @@
+footer.footer {
+	color: $white;
+	
+	a {
+		color: $white;
+	}
+	
+	.logo-wrap {
+		padding-bottom: 4.1rem;
+		
+		a {
+			display: inline-block;
+			position: relative;
+			top: -30px;
+		}
+	}
+	
+	.left {
+		position: relative;
+		padding-top: .45rem;
+		
+		@include breakpoint(medium) {
+			&:after {
+				content: '';
+				width: 1px;
+				background-color: $white;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				height: 100%;
+			}
+		}
+		
+		#footer-links {
+			display: list-item;
+			margin-left: -1.25rem;
+			margin-right: -1.25rem;
+			margin-bottom: 1.5rem;
+			
+			@include breakpoint(medium) {
+				margin-bottom: 0;
+				column-count: 2;
+			}
+			
+			li {
+				margin: .42rem 0;
+				padding-left: 1.25rem;
+				padding-right: 1.25rem;
+				display: inline-block;
+				width: 100%;
+
+				a {
+					font-size: rem-calc(20);
+					color: $white;
+				}
+			}
+		}
+		
+	}
+	
+	.right {
+		
+		@include breakpoint(medium) {
+			padding-top: .4rem;
+		}
+		
+		@include breakpoint(tablet) {
+			padding-left: 8%;
+		}
+		
+		.contact-links {
+			
+			.ffe-wrap {
+				margin-bottom: 1rem;
+				@include breakpoint(tablet) {
+					margin-bottom: 0;
+				}
+			}
+			
+			>div {
+				>div {
+					margin: .4rem 0;
+				}
+			}
+			
+			a.directions-link {
+				display: inline-block;
+			    line-height: 1.9rem;
+			    margin-top: .25rem;
+			}
+			
+		}
+		
+		.social-links {
+			padding-top: 1.9rem;
+			
+			.cell:first-child {
+				margin-left: -1.25rem;
+			}
+			
+		}
+		
+	}
+	
+	.source-org {
+		padding-top: 6.55rem;
+		padding-bottom: 2.5rem;
+		font-size: rem-calc(12);
+		opacity: .57;
+	}
+	
+}

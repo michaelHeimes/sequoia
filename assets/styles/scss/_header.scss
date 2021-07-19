@@ -2,16 +2,153 @@ header.header {
 	z-index: 5;
 	background-color: $brand-green;
 	transition: transform .5s ease;
-		
-	a {
-		color: $white;
-	}
-	
+
 	.top-bar-util {
 		background-color: #02532C;
+		
+		li.logo.tablet {
+		    margin-top: .5rem;
+		    margin-bottom: .5rem;
+		}
+		
 		ul#utility-nav {
 		    justify-content: flex-end;
+		    li {
+			    margin: .5rem 0 .55rem 1.25rem;
+			    a {
+				    color: $white;
+			    }
+		    }
 		}
+	}
+	
+	#top-bar-menu {
+		padding-top: .2rem;
+		padding-bottom: .2rem;
+		
+		@include breakpoint(tablet) {
+			padding-top: .35rem;
+			padding-bottom: 0;
+		}
+		
+		.top-bar-left {
+			max-width: 160px;
+			
+			@include breakpoint(medium) {
+				max-width: 100%;
+			}
+			
+		}
+		
+		li.logo {
+			
+			&.desktop {
+				a {
+					display: inline-block;
+					position: relative;
+				    top: -31px;
+				}
+			}
+			
+		}
+			
+		#main-nav {
+			align-items: center;
+			>li {
+				margin: 1.05rem 0 1.3rem 1.8rem;
+				
+				a {
+					font-family: $font-alt;
+					color: $white;
+					font-size: rem-calc(18);
+					text-transform: uppercase;
+					
+					@include breakpoint(large) {
+						font-size: rem-calc(22);
+					}
+					
+				}
+				
+			&.menu-item-has-children {
+				margin-top: -.4rem;
+				margin-bottom: 0;
+				
+			&.is-active {
+				background-color: $white;
+			}
+				
+				a {
+					background-color: $white;
+					color: $brand-green;
+					padding: .8rem 2.226rem .576rem 1.5rem;
+					
+					&:after {
+						right: 6px;
+						width: 10px;
+						height: 5px;
+						border: 0;
+						background-size: contain;
+					    background-position: center;
+					    background-repeat: no-repeat;						
+						background-image: url(../images/chev-down-green.svg);
+					}
+
+				}
+				
+				ul.submenu {
+					li {
+						a {
+							font-size: rem-calc(16);
+							font-family: $body-font-family;
+							text-transform: none;
+							padding: .7rem 1.45rem .95rem;
+							border-top: 1px solid $brand-green;
+						}
+						
+					}
+				}
+					
+			}
+							
+			}
+		}
+		
+		.menu-toggle-wrap {
+		    width: auto;
+		    flex: 0 0 auto;
+		    
+		    a#menu-toggle {
+			    padding: 0;
+			    width: 36px;
+			    height: 36px;
+			    position: relative;
+			    
+			    span {
+				    position: absolute;
+				    left: 0;
+				    right: 0;
+				    width: 36px;
+				    height: 4px;
+				    background-color: $white;
+				    
+				    &:nth-child(1) {
+					    top: 4px;
+				    }
+
+				    &:nth-child(2) {
+					    top: 16px;
+				    }
+				    
+				    &:nth-child(3) {
+					    bottom: 4px;
+				    }
+				    				    
+			    }
+			    
+		    }
+		    
+		}
+	
 	}
 		
 }

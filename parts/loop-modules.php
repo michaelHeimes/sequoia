@@ -1,6 +1,12 @@
 <?php if ( have_rows('modules') ) : ?>
 <?php while ( have_rows('modules') ) : ?> 
 	<?php the_row(); ?>
+	
+	<?php if ( get_row_layout() == 'contact_form' ) : 
+	
+		get_template_part('modules/contact_form');
+	
+	endif;?>
 
 	<?php if ( get_row_layout() == 'copy_with_dual_heading_styles' ) : 
 	
@@ -11,6 +17,12 @@
 	<?php if ( get_row_layout() == 'recent_news' ) : 
 	
 		get_template_part('modules/recent_news');
+	
+	endif;?>
+
+	<?php if ( get_row_layout() == 'location_and_contact_info' ) : 
+	
+		get_template_part('modules/location_and_contact_info');
 	
 	endif;?>
 
