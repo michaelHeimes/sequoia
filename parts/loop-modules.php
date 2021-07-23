@@ -34,7 +34,7 @@
 
 	<?php if ( get_row_layout() == 'slider' ) : 
 	
-		get_template_part('modules/slider');
+		get_template_part('modules/utility-slider');
 	
 	endif;?>
 

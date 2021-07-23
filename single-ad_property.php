@@ -15,7 +15,7 @@ get_header(); ?>
 				
 
 				
-				<div class="tag-wrap text-center">
+				<div class="post-tag-wrap text-center">
 					<?php 
 						$ad_prop_terms = get_the_terms( $post->ID , 'ad_prop_type' );
 						

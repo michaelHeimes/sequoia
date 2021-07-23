@@ -1,0 +1,166 @@
+.archive.post-type-archive-news_post,
+.recent-news {
+		
+	article.featured {
+		margin-top: 4rem;
+	    margin-bottom: 2rem;
+	    
+	    @include breakpoint(medium) {
+		    margin-top: 7.5rem;
+		    margin-bottom: 4.3rem;   
+	    }
+    
+		.inner {
+			padding: 0 1.6rem 2rem;	
+				
+			@include breakpoint(tablet) {
+				padding: 0 3.95rem 4.4rem;	
+			}
+			
+			.tag-wrap {
+				margin-bottom: 2.3rem;
+			}
+			
+			p.byline {
+				margin-bottom: 1.65rem;
+			}
+
+			h3 {
+				font-size: rem-calc(50);
+				line-height: 1.2;
+				font-weight: 500;
+				
+				@include breakpoint(large) {
+					max-width: 70%;
+				}
+				
+			}
+		}
+	}
+	
+	.article-grid,
+	article.news-row {
+		margin-bottom: 2.5rem;	
+			
+		a:not(.tag):not(.news-link) {
+			color: $black;
+			
+			h3 {
+				font-family: $body-font-family;
+				font-weight: 400;
+				margin-bottom: 0;
+				text-decoration: underline;
+				transition: color .25s ease-out;
+			}
+			
+		&:hover {
+			h3 {
+				color: $brand-green;
+			}
+		}
+			
+			
+		}
+		
+		h3 {
+			font-family: $body-font-family;
+			font-weight: 400;
+			margin-bottom: 0;
+			text-decoration: underline;
+		}
+		
+	}
+	
+	a.news-link,
+	.article-grid a {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;		
+	}
+	
+	a.news-link {
+		align-items: flex-start;
+		.inner {
+			width: 100%;
+			padding: 2.3rem 1.9rem 2rem;
+			
+			@include breakpoint(medium) {
+				width: auto;
+				padding: 3.3rem 2.9rem 4rem;
+			}
+			
+			h3 {
+				text-decoration: none;
+			}
+			
+		}
+		
+		h2.small-heading,
+		h3 {
+			display: inline-block;
+		}
+		
+		h2.small-heading {
+			color: $black;
+		}
+		
+		h3 {
+			display: flex;
+			align-items: center;
+			
+			svg {
+				margin-left: 1.4rem;
+				margin-top: .6rem;
+			}
+			
+		}
+		
+		svg circle {
+			transition: all .25s ease-out;
+		}
+		
+	&:hover {
+		svg circle {
+			fill: $black;
+		}
+	}
+		
+	}
+	
+	article.news-row {
+		padding-top: 2rem;
+		background-color: $brand-gray;
+		
+		@include breakpoint(medium) {
+			padding-top: 0;
+			padding-right: 0;
+		}
+		
+		.left {
+			padding-top: 0;
+			padding-bottom: 2rem;
+				
+			@include breakpoint(tablet) {
+				padding: 0 3.95rem 4.4rem;	
+			}
+			
+			.top {
+				margin-bottom: 2rem;
+				max-width: 400px;
+			}
+			
+			.tag-wrap {
+				margin-bottom: 2.3rem;
+			}
+			
+			.rm-wrap {
+				a {
+					color: $brand-green;
+					text-decoration: none;
+				}
+			}
+			
+		}
+		
+	}
+}

@@ -18,6 +18,11 @@ header.header {
 			    a {
 				    color: $white;
 			    }
+			    
+			&:last-child a {
+				padding-right: 0;
+			}
+			    
 		    }
 		}
 	}
@@ -62,51 +67,97 @@ header.header {
 					color: $white;
 					font-size: rem-calc(18);
 					text-transform: uppercase;
+					letter-spacing: .075px;
 					
 					@include breakpoint(large) {
 						font-size: rem-calc(22);
 					}
+					
+				&:hover {
+					text-decoration: underline;
+				}
 					
 				}
 				
 			&.menu-item-has-children {
 				margin-top: -.4rem;
 				margin-bottom: 0;
-				
-			&.is-active {
-				background-color: $white;
-			}
-				
+			
 				a {
-					background-color: $white;
-					color: $brand-green;
-					padding: .8rem 2.226rem .576rem 1.5rem;
+					padding-right: 2.28rem;
 					
 					&:after {
-						right: 6px;
+						right: 12px;
 						width: 10px;
 						height: 5px;
 						border: 0;
 						background-size: contain;
 					    background-position: center;
 					    background-repeat: no-repeat;						
-						background-image: url(../images/chev-down-green.svg);
+						background-image: url(../images/chev-down-white.svg);
 					}
-
+					
 				}
 				
 				ul.submenu {
 					li {
 						a {
+							color: $brand-green;
 							font-size: rem-calc(16);
 							font-family: $body-font-family;
 							text-transform: none;
 							padding: .7rem 1.45rem .95rem;
 							border-top: 1px solid $brand-green;
+							letter-spacing: 0;
+							
+						&:hover {
+							background-color: $black;
+							color: white;
+							text-decoration: none;
+						}
+							
 						}
 						
 					}
 				}
+				
+			&.available-properties {
+				a {
+					color: $brand-green;
+					background-color: $white;
+					padding: .8rem 2.283rem .576rem 1.35rem;
+					
+					&:after {					
+						background-image: url(../images/chev-down-green.svg);
+					}
+					
+					&:hover {
+						text-decoration: none;
+						background-color: $black;
+						color: white;
+						
+						&:after {					
+							background-image: url(../images/chev-down-white.svg);
+						}						
+						
+					}
+
+				}	
+				
+				&.is-active > a {
+					background-color: $white;
+					
+					&:hover {
+						background-color: $black;
+						color: white;
+						text-decoration: none;
+					}
+					
+				}
+							
+			}
+				
+
 					
 			}
 							

@@ -1,0 +1,272 @@
+.theme-blue {
+	
+	h2,
+	.h2,
+	.small-heading,
+	h2.small-heading,
+	.h2.small-heading,
+	h3.small-heading,
+	.h3.small-heading,
+	h2.large-heading,
+	.h2.large-heading,
+	h3.large-heading,
+	.h3.large-heading,
+	p.large-copy,
+	.single .large-copy p,
+	.single .large-copy ul,
+	.single .large-copy ol {
+		color: $brand-blue;
+	}
+	
+	button,
+	a.button,
+	.utility-slider {
+		
+		.slider-progress span {
+		background-color: $brand-blue;
+		}
+		
+		.slider-nav-wrap button {
+			background-color: $brand-blue;	
+		}
+	
+	&.outline {
+		background-color: transparent;
+		border: 2px solid $brand-blue;
+		color: $brand-blue;
+		
+		&:hover {
+			background-color: $brand-blue;
+			color: $white;
+		}
+		
+	}
+		
+	}
+	
+	.large-colored-copy {
+		p,
+		ul,
+		ol {
+			color: $brand-blue;
+		}
+	}
+	
+	.banner-icon-wrap,
+	.three_column_stats .inner {
+		background-color: $brand-blue;
+	}
+	
+	.two-column-list {
+		
+		.theme-color {
+			.inner {
+				background-color: $brand-blue;
+			}		
+		}
+		
+		.single-row {
+			color: $brand-blue;
+			border-color: $brand-blue;
+		}
+	}
+	
+}
+
+.theme-purple {
+
+	h2,
+	.h2,
+	.small-heading,
+	h2.small-heading,
+	.h2.small-heading,
+	h3.small-heading,
+	.h3.small-heading,
+	h2.large-heading,
+	.h2.large-heading,
+	h3.large-heading,
+	.h3.large-heading,
+	p.large-copy,
+	.single .large-copy p,
+	.single .large-copy ul,
+	.single .large-copy ol {
+		color: $brand-purple;
+	}
+	
+	button,
+	a.button,
+	.utility-slider {
+		
+		.slider-progress span {
+		background-color: $brand-purple;
+		}
+		
+		.slider-nav-wrap button {
+			background-color: $brand-purple;
+		}
+	
+	&.outline {
+		background-color: transparent;
+		border: 2px solid $brand-purple;
+		color: $brand-purple;
+		
+		&:hover {
+			background-color: $brand-purple;
+			color: $white;
+		}
+		
+	}
+		
+	}
+	
+	.large-colored-copy {
+		p,
+		ul,
+		ol {
+			color: $brand-purple;
+		}
+	}
+	
+	.banner-icon-wrap,
+	.three_column_stats .inner {
+		background-color: $brand-purple;
+	}
+	
+	.two-column-list {
+		
+		.theme-color {
+			.inner {
+				background-color: $brand-purple;
+			}		
+		}
+		
+		.single-row {
+			color: $brand-purple;
+			border-color: $brand-purple;
+		}
+	}
+	
+	
+}
+
+.post-type-archive-ad_property,
+.tax-ad_prop_type,
+.single-ad_property,
+.theme-red {
+	
+	h2,
+	.h2,
+	.small-heading,
+	h2.small-heading,
+	.h2.small-heading,
+	h3.small-heading,
+	.h3.small-heading,
+	h2.large-heading,
+	.h2.large-heading,
+	h3.large-heading,
+	.h3.large-heading,
+	p.large-copy,
+	.single .large-copy p,
+	.single .large-copy ul,
+	.single .large-copy ol {
+		color: $brand-red;
+	}
+	
+	button,
+	a.button,
+	.utility-slider {
+		
+		.slider-progress span {
+		background-color: $brand-red;
+		}
+		
+		.slider-nav-wrap button {
+			background-color: $brand-red;
+		}
+	
+	&.outline {
+		background-color: transparent;
+		border: 2px solid $brand-red;
+		color: $brand-red;
+		
+		&:hover {
+			background-color: $brand-red;
+			color: $white;
+		}
+		
+	}
+		
+	}
+	
+	.large-colored-copy {
+		p,
+		ul,
+		ol {
+			color: $brand-red;
+		}
+	}
+	
+	.banner-icon-wrap,
+	.three_column_stats .inner {
+		background-color: $brand-red;
+	}
+	
+	.two-column-list {
+		
+		.theme-color {
+			.inner {
+				background-color: $brand-red;
+			}		
+		}
+		
+		.single-row {
+			color: $brand-red;
+			border-color: $brand-red;
+		}
+	}
+	
+}
+
+.single-service {
+
+&.theme-blue {
+	.inner {
+		h2 {
+			color: $brand-blue;
+		}
+		.icon-wrap,
+		a.button {
+			background-color: $brand-blue;
+		}
+		
+	}
+}
+
+&.theme-purple {
+	.inner {
+		h2 {
+			color: $brand-purple;
+		}
+		.icon-wrap,
+		a.button {
+			background-color: $brand-purple;
+		}
+
+	}
+}
+
+&.theme-red {
+	.inner {
+		h2 {
+			color: $brand-red;
+		}
+		.icon-wrap,
+		a.button {
+			background-color: $brand-red;
+		}
+
+	}
+}
+		
+}
+

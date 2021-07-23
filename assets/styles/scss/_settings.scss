@@ -84,7 +84,7 @@ $foundation-palette: (
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$dark-gray: #707070;
 $black: #000000;
 $white: #ffffff;
 $body-background: $white;
@@ -148,16 +148,16 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
+    'h1': ('font-size': 58),
+    'h2': ('font-size': 22),
+    'h3': ('font-size': 23),
     'h4': ('font-size': 18),
     'h5': ('font-size': 17),
     'h6': ('font-size': 16),
   ),
   medium: (
     'h1': ('font-size': 78),
-    'h2': ('font-size': 40),
+    'h2': ('font-size': 29),
     'h3': ('font-size': 31),
     'h4': ('font-size': 25),
     'h5': ('font-size': 20),
@@ -231,16 +231,16 @@ $input-error-font-weight: $global-weight-bold;
 // 7. Accordion
 // ------------
 
-$accordion-background: $white;
+$accordion-background: $brand-gray;
 $accordion-plusminus: true;
 $accordion-title-font-size: rem-calc(12);
-$accordion-item-color: $primary-color;
-$accordion-item-background-hover: $light-gray;
-$accordion-item-padding: 1.25rem 1rem;
-$accordion-content-background: $white;
-$accordion-content-border: 1px solid $light-gray;
+$accordion-item-color: $black;
+$accordion-item-background-hover: $brand-gray;
+$accordion-item-padding: 0 3.1rem 0;
+$accordion-content-background: $brand-gray;
+$accordion-content-border: 0px solid $light-gray;
 $accordion-content-color: $body-font-color;
-$accordion-content-padding: 1rem;
+$accordion-content-padding: 1rem 3.1rem 0.05rem;
 
 // 8. Accordion Menu
 // -----------------
@@ -292,7 +292,7 @@ $button-padding: .65em 1.701em .5em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $brand-green;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-background-hover: $black;
 $button-color: $white;
 $button-color-alt: $black;
 $button-radius: $global-radius;
@@ -443,14 +443,14 @@ $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-font-weight: $global-weight-normal;
 $input-line-height: $global-lineheight;
-$input-background: $white;
-$input-background-focus: $white;
+$input-background: transparent;
+$input-background-focus: transparent;
 $input-background-disabled: $light-gray;
-$input-border: 1px solid $medium-gray;
+$input-border: 1px solid $brand-green;
 $input-border-focus: 1px solid $dark-gray;
 $input-padding: $form-spacing / 2;
-$input-shadow: inset 0 1px 2px rgba($black, 0.1);
-$input-shadow-focus: 0 0 5px $medium-gray;
+$input-shadow: inset 0 0px 0px rgba($black, 0);
+$input-shadow-focus: 0 0 0px $medium-gray;
 $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
@@ -540,13 +540,13 @@ $orbit-control-zindex: 10;
 // 27. Pagination
 // --------------
 
-$pagination-font-size: rem-calc(14);
+$pagination-font-size: rem-calc(17);
 $pagination-margin-bottom: $global-margin;
 $pagination-item-color: $black;
 $pagination-item-padding: rem-calc(3 10);
 $pagination-item-spacing: rem-calc(1);
 $pagination-radius: $global-radius;
-$pagination-item-background-hover: $light-gray;
+$pagination-item-background-hover: transparent;
 $pagination-item-background-current: $primary-color;
 $pagination-item-color-current: $white;
 $pagination-item-color-disabled: $medium-gray;

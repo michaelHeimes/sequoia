@@ -7,4 +7,13 @@
 			</div>
 		</div>
 	</div>
+	
+	<?php 
+	$image = get_field('red_theme_icon', 'option');
+	if( !empty( $image ) ): ?>
+	<div class="icon-wrap text-center">
+	    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+	</div>
+	<?php endif; ?>
+
 </div>

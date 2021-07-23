@@ -7,15 +7,13 @@ get_header(); ?>
 			
 <div class="content">
 	
-<?php get_template_part('parts/banner', 'ad-property');?>
+<?php get_template_part('parts/banner', 'news');?>
 	<div class="grid-container">
 		<div class="inner-content grid-x grid-padding-x">
 	
 			<main class="main cell small-12 tablet-10 tablet-offset-1 large-8 large-offset-2" role="main">
-				
 
-				
-				<div class="tag-wrap text-center">
+				<div class="post-tag-wrap text-center">
 					<?php 
 						$ad_prop_terms = get_the_terms( $post->ID , 'news_type' );
 						
@@ -29,11 +27,13 @@ get_header(); ?>
 					<?php endforeach;?>
 				</div>
 				
-				<div class="post-date cell small-12 medium-shrink"><?php echo get_the_date( 'F jS Y', $post->ID );?></div>
+				<div class="post-date cell small-12 text-center"><?php echo get_the_date( 'F jS Y', $post->ID );?></div>
+				
+				<h2 class="h1 entry-title single-title text-center" itemprop="headline"><?php the_title();?></h2>
 			
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
-			    	<?php get_template_part( 'parts/loop', 'single-property' ); ?>
+			    	<?php get_template_part( 'parts/loop', 'single-news-post' ); ?>
 			    	
 			    <?php endwhile; else : ?>
 			

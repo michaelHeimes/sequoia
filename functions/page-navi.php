@@ -10,8 +10,32 @@
 			'total' => $wp_query->max_num_pages,
 			'mid_size' => 5,
 			'prev_next' => true,
-		    'prev_text' => __( '&laquo;', 'jointswp' ),
-		    'next_text' => __( '&raquo;', 'jointswp' ),
+		    'prev_text' => __( '<svg width="17px" height="12px" viewBox="0 0 17 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>page-left</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="page-left" transform="translate(1.060000, 0.530000)" stroke="#000000" stroke-width="1.5">
+            <g id="Group_672" transform="translate(7.971000, 5.356000) rotate(180.000000) translate(-7.971000, -5.356000) translate(0.000000, 0.000000)">
+                <g id="Group_96" transform="translate(0.000000, -0.000000)">
+                    <g id="Group_95" transform="translate(0.000000, 4.856000)">
+                        <line x1="0" y1="0.5" x2="15.8" y2="0.5" id="Line_1088"></line>
+                    </g>
+                    <polyline id="Path_35" points="10.586 0 15.942 5.356 10.586 10.712"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>', 'jointswp' ),
+		    'next_text' => __( '<svg width="17px" height="12px" viewBox="0 0 17 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>page-right</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="page-right" transform="translate(0.000000, 0.531000)" stroke="#000000" stroke-width="1.5">
+            <g id="Group_95" transform="translate(0.000000, 4.856000)">
+                <line x1="0" y1="0.5" x2="15.8" y2="0.5" id="Line_1088"></line>
+            </g>
+            <polyline id="Path_35" points="10.586 0 15.942 5.356 10.586 10.712"></polyline>
+        </g>
+    </g>
+</svg>', 'jointswp' ),
 			'type' => 'list',
 		) );
 		$paginate_links = str_replace( "<ul class='page-numbers'>", "<ul class='pagination'>", $paginate_links );

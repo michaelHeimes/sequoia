@@ -5,44 +5,47 @@
  * For more info: http://jointswp.com/docs/grid-archive/
  */
 
-// Adjust the amount of rows in the grid
-$grid_columns = 4; ?>
+?>
 
-<?php if( 0 === ( $wp_query->current_post  )  % $grid_columns ): ?>
 
-    <div class="grid-x grid-margin-x grid-padding-x archive-grid" data-equalizer> <!--Begin Grid--> 
-
-<?php endif; ?> 
-
-		<!--Item: -->
-		<div class="small-6 medium-3 large-3 cell panel" data-equalizer-watch>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('cell'); ?> role="article">
+		<div class="inner" data-equalizer-watch>
 		
-			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
+			<div class="top">
+		
+				<section class="featured-image" itemprop="text">
+					<?php the_post_thumbnail('ad-grid'); ?>
+				</section> <!-- end article section -->
 				
-				<div class="top">
+				<div class="post-tag-wrap text-center">
+					<?php 
+						$ad_prop_terms = get_the_terms( $post->ID , 'ad_prop_type' );
+						
+						foreach ($ad_prop_terms as $term): 
+						$link = get_term_link($term);
+						$icon = get_field('icon', $term);
+					?>
+					<a class="button tag tax" aria-label="<?php echo $term->name; ?> Archive Link" href="<?php echo $link;?>">
+						<span class="theme-name"><?php echo $term->name; ?></span>
+					</a>
+					<?php endforeach;?>
+				</div>
 			
-					<section class="featured-image" itemprop="text">
-						<?php the_post_thumbnail('ad-grid'); ?>
-					</section> <!-- end article section -->
+				<header class="article-header">
+					<h2 class="h3 title"><?php the_field('street_address');?></h2>	
+					<h3><?php the_field('city_state');?></h3>				
+				</header> <!-- end article header -->	
 				
-					<header class="article-header">
-						<h3 class="title"><?php the_field('street_address');?></h3>	
-						<h4><?php the_field('city_state');?></h4>				
-					</header> <!-- end article header -->	
-					
-				</div>
-								
-				<div class="bottom">
-					<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Learn More</a>
-				</div>
-								    							
-			</article> <!-- end article -->
-			
-		</div>
+			</div>
+							
+			<div class="bottom">
+				<a class="button outline tag" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Learn More</a>
+			</div>
+						
+		</div>    							
+	</article> <!-- end article -->
+	
 
-<?php if( 0 === ( $wp_query->current_post + 1 )  % $grid_columns ||  ( $wp_query->current_post + 1 ) ===  $wp_query->post_count ): ?>
 
-   </div>  <!--End Grid --> 
 
-<?php endif; ?>
 

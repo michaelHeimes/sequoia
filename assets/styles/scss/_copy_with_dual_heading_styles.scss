@@ -1,3 +1,17 @@
 .copy_with_dual_heading_styles {
 	
+	.large-copy {
+		
+		h2 {
+			margin-top: 1.75em;
+		}
+		
+		p:not(:last-of-type) {
+			margin-bottom: 2.25em;
+		}
+	}
+	
+	.btn-wrap {
+		padding-top: 3.6rem;
+	}	
 }

@@ -50,6 +50,46 @@
 			</div>
 		</div>
 	</header> <!-- end article header -->	
+	
+	<?php if( get_field('color_theme') == 'green'):?>
+		<?php 
+		$image = get_field('red_theme_icon', 'option');
+		if( !empty( $image ) ): ?>
+		<div class="banner-icon-wrap text-center">
+		    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+		</div>
+		<?php endif;?>
+	<?php endif;?>
+
+	<?php if( get_field('color_theme') == 'blue'):?>
+		<?php 
+		$image = get_field('blue_theme_icon', 'option');
+		if( !empty( $image ) ): ?>
+		<div class="banner-icon-wrap text-center">
+		    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+		</div>
+		<?php endif;?>
+	<?php endif;?>
+
+	<?php if( get_field('color_theme') == 'purple'):?>
+		<?php 
+		$image = get_field('purple_theme_icon', 'option');
+		if( !empty( $image ) ): ?>
+		<div class="banner-icon-wrap text-center">
+		    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+		</div>
+		<?php endif;?>
+	<?php endif;?>
+	
+	<?php if( get_field('color_theme') == 'red'):?>
+		<?php 
+		$image = get_field('red_theme_icon', 'option');
+		if( !empty( $image ) ): ?>
+		<div class="banner-icon-wrap text-center">
+		    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+		</div>
+		<?php endif;?>
+	<?php endif;?>
 					
     <section class="entry-content" itemprop="text">
 	    <?php the_content(); ?>

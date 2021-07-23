@@ -7,12 +7,75 @@ Stylesheet: Global Stylesheet
 /*********************
 TYPOGRAPHY
 *********************/
+h2,
+.h2,
 .small-heading,
 h2.small-heading,
-.h2.smll-heading,
+.h2.small-heading,
 h3.small-heading,
 .h3.small-heading {
+	font-size: 1.35593rem;
+	line-height: 1;
+	text-transform: uppercase;
+	font-family: $font-alt;
+	letter-spacing: 5px;
+	color: $brand-green;
+	margin-bottom: .48em;
 	
+	@include breakpoint (medium) {
+		font-size: 1.8125rem;	
+	}
+	
+}
+
+h2.large-heading,
+.h2.large-heading,
+h3.large-heading,
+.h3.large-heading {
+	font-family: $header-font-family;
+	font-size: 31px;
+	line-height: 1.17;
+	letter-spacing: 0;
+	color: $brand-green;
+	margin-bottom: .52em;
+	
+	@include breakpoint (medium) {
+		font-size: 41px;
+	}
+	
+}
+
+h1.xl-heading,
+h2.xl-heading,
+.h2.xl-heading,
+h3.xl-heading,
+.h3.xl-heading {
+	font-family: $header-font-family;
+	font-weight: bold;
+	font-size: 42px;
+	line-height: 1;
+	letter-spacing: 0;
+	color: $black;
+	margin-bottom: .52em;
+	
+	@include breakpoint (medium) {
+		font-size: 56px;
+	}
+	
+}
+
+p.large-copy,
+.large-copy p,
+.large-copy ul,
+.large-copy ol {
+	font-size: 19px;
+	line-height: 1.6842;
+}
+
+p.byline {
+	font-size: rem-calc(15);
+	color: $black;
+	margin-bottom: .15em;
 }
 
 /*********************
@@ -38,10 +101,102 @@ COMMON ELEMENTS
 	
 }
 
+.section {
+	margin-top: 4rem;
+    margin-bottom: 4rem;
+    
+    @include breakpoint(medium) {
+	    margin-top: 7.5rem;
+	    margin-bottom: 7.5rem;   
+    }
+    
+&:first-child {
+	margin-top: 3.5rem;
+    
+    @include breakpoint(medium) {
+	    margin-top: 4rem;
+	    margin-bottom: 7.5rem;   
+    }	
+}
+    
+&.has-grid {
+	margin-bottom: 2rem;
+	
+	@include breakpoint(medium) {
+		margin-bottom: 5rem;
+	}
+	
+}
+    
+}
+
+.page-contact .section {
+    margin-bottom: 3.1rem;
+}
+
+.location_and_contact_info.section {
+    margin-top: 3rem;
+}
+
+.contact_form {
+	h2 {
+		font-family: $header-font-family;
+		text-transform: none;
+		font-size: rem-calc(41);
+		line-height: 1.17;
+		margin-bottom: 3rem;
+	}
+}
+
 button,
 .button {
+	min-width: 250px;
 	font-weight: 400;
 	letter-spacing: 5px;
+	margin-bottom: 0;
+	
+&.outline {
+	background-color: transparent;
+	border: 2px solid $brand-green;
+	color: $brand-green;
+	
+	&:hover {
+		background-color: $brand-green;
+		color: $white;
+	}
+	
+}
+	
+}
+
+.tag {
+	font-size: 1rem;
+	text-align: center;
+	display: inline-block;
+	background-color: $brand-green;
+	color: $white;
+	font-family: $font-alt;
+	text-transform: uppercase;
+	padding: .45rem 2rem .25rem;
+	min-width: 187px;
+	letter-spacing: 3px;
+	transition: background-color 0.25s ease-out;
+	
+	&:hover,
+	&:focus {
+		background-color: $black;
+		color: $white;
+	}
+	
+	a {
+		color: $white;
+		
+		&:hover {
+			color: $white;
+		}
+		
+	}
+	
 }
 
 .green-bg {
@@ -50,6 +205,31 @@ button,
 
 .gray-bg {
 	background-color: $brand-gray;
+}
+
+.heading-wrap.small-xl {
+	
+	.inner {
+		border-bottom: 1px solid $dark-gray;
+		
+		h3.xl-heading {
+			margin-bottom: .56em;
+		}
+		
+	}
+}
+
+.banner-icon-wrap {
+	position: relative;
+	width: 103px;
+	height: 103px;
+	margin: -53px auto 0;
+	border: 9px solid $white;
+	border-radius: 100%;
+	background-color: $brand-green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /*********************
@@ -194,7 +374,62 @@ IMAGE GALLERY STYLES
 PAGE NAVI STYLES
 *********************/
 .page-navigation {
-	margin-top: 1rem;
+	width: 100%;
+	margin-top: 3.2rem;
+	
+	ul.pagination {
+		padding-bottom: 4.85rem;
+		display: flex;
+		justify-content: center;
+		
+		li {
+			margin: .45rem;
+			width: 39px;
+			height: 39px;	
+			padding: 0;		
+			display: flex;
+			align-items: center;
+			justify-content: center;	
+			display: flex;
+		    justify-content: stretch;
+		    align-items: stretch;
+			
+			a,
+			span.current {
+				font-size: rem-calc(17);
+				line-height: 1;
+				border-radius: 100%;
+				width: 100%;
+				height: 100%;
+				padding: 0;
+				display: flex;
+			    justify-content: center;
+			    align-items: center;
+			}
+			
+			a {
+				color: $black;
+			}
+			
+			span.current {
+				background-color: $brand-green;
+			}
+	
+		}
+	}	
+
+}
+
+body {
+		.gform_wrapper.gravity-theme input[type=color], .gform_wrapper.gravity-theme input[type=date], .gform_wrapper.gravity-theme input[type=datetime-local], .gform_wrapper.gravity-theme input[type=datetime], .gform_wrapper.gravity-theme input[type=email], .gform_wrapper.gravity-theme input[type=month], .gform_wrapper.gravity-theme input[type=number], .gform_wrapper.gravity-theme input[type=password], .gform_wrapper.gravity-theme input[type=search], .gform_wrapper.gravity-theme input[type=tel], .gform_wrapper.gravity-theme input[type=text], .gform_wrapper.gravity-theme input[type=time], .gform_wrapper.gravity-theme input[type=url], .gform_wrapper.gravity-theme input[type=week], .gform_wrapper.gravity-theme select, .gform_wrapper.gravity-theme textarea {
+	    font-size: 16px;
+	    padding: 7px 29px 10px;
+	}
+
+}
+
+[type=color], [type=date], [type=datetime-local], [type=datetime], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], textarea {
+	height: 4.5rem;
 }
 
 /*********************
@@ -461,7 +696,6 @@ FOOTER STYLES
 *********************/
 .footer {
 	clear: both;
-	margin-top: 1em;
 }
 	
 /*********************

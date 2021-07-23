@@ -1,6 +1,20 @@
 .home .banner {
 	min-height: 507px;
 	padding-top: 4.7rem;
+    padding-bottom: 14.4rem;
+	
+	h1 {
+		color: $white;
+		font-weight: bold;
+		padding-top: 0;
+		padding-bottom: 7.2rem;
+	}
+	
+	a.button:hover {
+		background-color: $white;
+		color: $brand-green;
+	}
+	
 }
 
 .banner {
@@ -9,7 +23,8 @@
 	h1 {
 		color: $white;
 		font-weight: bold;
-		padding-bottom: .31em;
+		padding-top: 6.7rem;
+		padding-bottom: 8.45rem;
 	}
 	
 }

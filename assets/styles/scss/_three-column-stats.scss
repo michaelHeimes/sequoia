@@ -1,0 +1,55 @@
+.three_column_stats {
+	
+	.inner {
+		background-color: $brand-green;
+		color: $white;
+		padding-top: 2.6rem;
+		padding-bottom: 3.05rem;
+		
+		@include breakpoint (medium) {
+			padding-top: 3.6rem;
+			padding-bottom: 4.05rem;			
+		}
+		
+		>.grid-x {
+			justify-content: center;
+		}
+		
+		.single-col {
+			padding-top: 1.55rem;
+			padding-bottom: 1.4rem;
+			
+			&:not(:last-child) {
+				border-bottom: 1px solid $white;
+				@include breakpoint (medium) {
+					border-bottom: 0;
+				}
+			}
+			
+			@include breakpoint (medium) {
+				&:nth-child(1) {
+					border-right: 1px solid $white;;
+				}
+			}
+			
+			@include breakpoint (tablet) {
+				&:not(:last-child) {
+					border-right: 1px solid $white;;
+				}
+			}
+			
+			.number {
+				font-size: 109px;
+				line-height: 1;
+				font-family: $font-alt;
+			}
+			
+			.text {
+				font-size: 22px;
+			}
+			
+		}
+		
+	}
+	
+}

@@ -13,25 +13,90 @@ get_header(); ?>
 		
 		<?php get_template_part('parts/banner', 'news');?>
 					
-		<div class="inner-content grid-x grid-padding-x">
+		<div class="inner-content">
 	
-		    <main class="main cell small-12" role="main">
-		    
-			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			 
-					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'news-archive-grid' ); ?>
+		    <main class="main" role="main">
+			    
+		        <div class="grid-container">
+			        <div class="grid-x grid-padding-x">
+			    
+					    <?php if ( !is_paged() ):?>
+							<?php
+							$featured_posts = get_field('featured_article', 73);
+							if( $featured_posts ): ?>
+							    <?php foreach( $featured_posts as $post ): 
+							
+							        // Setup this post for WP functions (variable must be named $post).
+							        setup_postdata($post); 
+							        $terms = get_the_terms( $post->ID, 'news_type' ); 
+							        $first_term = $terms[0];
+							        $link = get_term_link($first_term);
+							        $name =  $first_term->name;
+							        ;?>
+							        							        
+									<article id="post-<?php the_ID(); ?>" <?php post_class('cell small-12 featured'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+										<div class="inner gray-bg">
+															
+											<div class="tag-wrap">
+												<a class="tag" href="<?php echo $link;?>"><?php echo $name;?></a>
+											</div>
+															
+											<header class="article-header">	
+												<?php get_template_part( 'parts/content', 'news-byline' ); ?>
+												<h3 class="entry-title single-title xl-heading" itemprop="headline"><?php the_title(); ?></h3>
+										    </header> <!-- end article header -->
+																
+											<footer class="article-footer">
+												<a class="button outline" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read More</a>
+											</footer> <!-- end article footer -->
+																
+										</div>
+									</article> <!-- end article -->
+									
+							    <?php endforeach; ?>
+							    
+							    <?php 
+							    // Reset the global post object so that the rest of the page works correctly.
+							    wp_reset_postdata(); ?>
+							<?php endif; ?>
+					    <?php endif;?>
+					    
 				    
-				<?php endwhile; ?>	
-
-					<?php joints_page_navi(); ?>
-					
-				<?php else : ?>
-											
-					<?php get_template_part( 'parts/content', 'missing' ); ?>
+					    <?php if (have_posts()) : $counter = 1; while (have_posts()) : the_post(); ?>
+					 
+							<!-- To see additional archive styles, visit the /parts directory -->
+							
+							<?php if ( !is_paged() ):?>
+												
+								<?php if ( $counter <= 4 ) :?>						
+								
+									<?php get_template_part( 'parts/loop', 'news-grid' ); ?>
+									
+								<?php else:?>
+								
+									<?php get_template_part( 'parts/loop', 'news-row' ); ?>
+								
+								<?php endif;?>
+								
+							<?php else:?>
+							
+								<?php get_template_part( 'parts/loop', 'news-row' ); ?>
+							
+							<?php endif;?>
+						    
+						<?php $counter++; endwhile; ?>	
+		
+							<?php joints_page_navi(); ?>
+							
+						<?php else : ?>
+													
+							<?php get_template_part( 'parts/content', 'missing' ); ?>
+								
+						<?php endif; ?>
 						
-				<?php endif; ?>
-																								
+			        </div>
+		        </div>
+		        																		
 		    </main> <!-- end #main -->
 		    
 

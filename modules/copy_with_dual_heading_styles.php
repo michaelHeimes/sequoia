@@ -12,7 +12,7 @@
 			<?php endif;?>
 			
 			<?php if( $copy = get_sub_field('copy') ):?>
-				<div class="copy-wrap"><?php echo $copy;?></div>
+				<div class="copy-wrap large-copy"><?php echo $copy;?></div>
 			<?php endif;?>			
 			
 			<?php 

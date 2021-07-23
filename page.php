@@ -7,7 +7,7 @@
 
 get_header(); ?>
 	
-	<div class="content">
+	<div class="content theme-<?php the_field('color_theme');?>">
 	
 		<div class="inner-content">
 	

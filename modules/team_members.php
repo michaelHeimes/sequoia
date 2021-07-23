@@ -1,14 +1,14 @@
-<div class="team_members section">
+<div class="team_members gray-bg">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
-			<div class="cell small-12 tablet-10 tablet-offset-1 large-8 large-offset-2">
+			<div class="cell small-12 large-10 large-offset-1">
 				
 			<?php if( $small_heading = get_sub_field('small_heading') ):?>
 				<h2 class="small-heading font-alt text-center"><?php echo $small_heading;?></h2>
 			<?php endif;?>
 
 			<?php if( $large_heading = get_sub_field('large_heading') ):?>
-				<h3 class="large-heading text-center"><?php echo $large_heading;?></h3>
+				<h3 class="xl-heading text-center"><?php echo $large_heading;?></h3>
 			<?php endif;?>
 			
 			<ul class="accordion" data-accordion>
@@ -27,17 +27,19 @@
 					<li class="accordion-item" data-accordion-item>
 							
 						<a href="#" class="accordion-title">
-							<div class="grid-x grid-padding-x">
+							<div class="grid-x grid-padding-x align-middle">
 								<div class="left cell shrink">
 									<?php 
 									$image = get_field('photo');
 									if( !empty( $image ) ): ?>
+									<div class="img-wrap">
 									    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+									</div>
 									<?php endif; ?>
 								</div>
 								<div class="right cell auto">
-									<h4 class="h2"><?php the_title();?></h4>
-									<h5><?php the_field('title');?></h5>
+									<h2 class="h3"><?php the_title();?></h2>
+									<h3><?php the_field('title');?></h3>
 								</div>
 							</div>
 						</a>
@@ -54,10 +56,16 @@
 											| <span>direct:</span> <a href="tel:<?php echo $o_number;?>"><?php echo $o_number;?></a>
 										<?php endif;?>										
 									</div>
+									<?php if ($email = get_field('email_address')):?>
+										<div class="email">
+											<span>email: </span>
+											<a href="mailto:<?php echo $email;?>"><?php echo $email;?></a>
+										</div>
+									<?php endif;?>
 								</div>
 							</div>	
 							<div class="bottom grid-x grid-padding-x">
-								<div class="cell small-12">
+								<div class="cell small-12 large-copy">
 									<?php the_field('bio');?>
 								</div>
 							</div>			

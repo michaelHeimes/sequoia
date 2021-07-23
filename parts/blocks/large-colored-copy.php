@@ -10,7 +10,7 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'testimonial-' . $block['id'];
+$id = 'large-colored-copy-' . $block['id'];
 if( !empty($block['anchor']) ) {
     $id = $block['anchor'];
 }

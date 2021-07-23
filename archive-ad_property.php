@@ -12,13 +12,24 @@ get_header(); ?>
 	<div class="content">
 		
 		<?php get_template_part('parts/banner', 'ad-property');?>
-				
-		<?php joints_ad_tax_nav();?>
+		
+		<?php 
+		$image = get_field('red_theme_icon', 'option');
+		if( !empty( $image ) ): ?>
+		<div class="banner-icon-wrap text-center">
+		    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+		</div>
+		<?php endif;?>
+		
+		<div class="articles-container grid-container">
+			<?php joints_ad_tax_nav();?>
+		</div>
 	
-		<div class="inner-content grid-x grid-padding-x">
+		<div class="inner-content">
 	
-		    <main class="main cell small-12" role="main">
-		    
+		    <main class="main" role="main">
+		    	<div class="articles-container grid-container">
+			    	<div class="articles-grid grid-x grid-padding-x small-up-2 medium-up-3 tablet-up-4 large-up-4" data-equalizer data-equalize-on="small">
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			 
 					<!-- To see additional archive styles, visit the /parts directory -->
@@ -32,8 +43,9 @@ get_header(); ?>
 											
 					<?php get_template_part( 'parts/content', 'missing' ); ?>
 						
-				<?php endif; ?>
-																								
+				<?php endif; ?>		
+			    	</div>
+		    	</div>																
 		    </main> <!-- end #main -->
 		    
 

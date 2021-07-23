@@ -48,7 +48,7 @@
 		</header> <!-- end .header -->
 		
 		
-		<div class="off-canvas-wrapper<?php if( $color_theme = get_field('color_theme')):?>theme-<?php echo $color_theme;?><?php endif;?>)">
+		<div class="off-canvas-wrapper">
 			
 			<!-- Load off-canvas container. Feel free to remove if not using. -->			
 			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>

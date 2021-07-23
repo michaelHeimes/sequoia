@@ -1,0 +1,79 @@
+.team_members {
+	padding-top: 7.85rem;
+	padding-bottom: 11.05rem;
+	
+	h3.xl-heading {
+		margin-bottom: 1.28em;
+	}
+	
+	.accordion-item {
+		padding: 3.5rem 0 3.6rem;
+		margin-top: -1px;
+		border-top: 1px solid $dark-gray;
+		border-bottom: 1px solid $dark-gray;
+		
+		a.accordion-title:before {
+			content: '';
+			width: 39px;
+			height: 39px;
+			background-image: url(../images/accordion-chev.svg);
+			transform: translateY(-50%) rotateX(0deg);
+			transition: transform .4s;
+		}
+		
+	&.is-active {
+		a.accordion-title:before {
+			transform: translateY(-50%) rotateX(180deg);
+		}
+	}
+		
+		.img-wrap {
+			width: 88px;
+			height: 88px;
+			border-radius: 100%;
+			overflow: hidden;
+		}
+		
+		h2.h3 {
+			font-size: rem-calc(40);
+			line-height: 1.05;
+			text-transform: none;
+		}
+		
+		h3 {
+			font-size: rem-calc(22);
+			line-height: 1.1;			
+		}
+		
+		.accordion-content {
+			.top {
+				.left {
+					width: 128px;
+				}
+				
+				.right {
+					font-size: rem-calc(17);
+					a {
+						color: $black;
+					}
+					span {
+						font-weight: bold;
+					}
+					
+					.email {
+						padding-top: .35rem;
+					}
+					
+				}
+				
+			}
+			
+			.bottom {
+				padding-top: 2.3rem;
+			}
+			
+		}
+		
+	}
+	
+}

@@ -1,0 +1,70 @@
+.services_grid {
+	
+	.heading-wrap {
+		margin-bottom: 3.2rem;
+		@include breakpoint(medium) {
+			margin-bottom: 5.2rem;
+		}
+	}
+	
+	.single-service {
+		margin-bottom: 2.5rem;
+		
+		.inner {
+			background-color: $brand-gray;	
+			.top {
+				padding: 1.9rem 1.6rem 1.5rem;	
+				
+				@include breakpoint(tablet) {
+					padding: 3.78rem 3.95rem 1.15rem;	
+				}
+				
+			}
+				
+			h2 {
+				font-family: $header-font-family;
+				font-size: 36px;
+				line-height: 1;
+				text-transform: none;
+				
+				@include breakpoint(tablet) {
+					font-size: 45px;
+				}
+				
+			}
+		
+			p {
+				line-height: 1.8125;
+			}
+			
+			.icon-wrap {
+				position: relative;
+				z-index: 1;
+				margin-left: 58px;
+				margin-bottom: -45px;
+				width: 85px;
+				height: 85px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 9px solid $brand-gray;
+				border-radius: 100%;
+				background-color: $brand-green;
+			}
+			
+			a.button {
+				display: block;
+				width: 100%;
+				font-size: 19px;
+				line-height: 1.526;
+				
+			&:hover {
+				background-color: $black;
+			}
+				
+			}
+		
+		}
+			
+	}
+}

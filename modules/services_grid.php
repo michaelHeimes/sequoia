@@ -1,22 +1,23 @@
-<div class="services_grid section">
+<div class="services_grid section has-grid">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x text-center">
 			
-			<?php if( $small_heading = get_sub_field('small_heading') ):?>
-			<div class="cell small-12">
-				<h2 class="small-heading"><?php echo $small_heading;?></h2>
-			</div>
-			<?php endif;?> 
+			<div class="heading-wrap small-xl cell small-12 tablet-10 tablet-offset-1 large-8 large-offset-2">
+				<div class="inner">
 			
-			<?php if( $large_heading = get_sub_field('large_heading') ):?>
-			<div class="cell small-12">
-				<h3 class="large-heading"><?php echo $large_heading;?></h3>
-			</div>
-			<?php endif;?> 
+					<?php if( $small_heading = get_sub_field('small_heading') ):?>
+						<h2 class="small-heading text-center"><?php echo $small_heading;?></h2>
+					<?php endif;?> 
+					
+					<?php if( $large_heading = get_sub_field('large_heading') ):?>
+						<h3 class="xl-heading text-center"><?php echo $large_heading;?></h3>
+					<?php endif;?> 
 				
+				</div>
+			</div>
 		</div>
 		
-		<div class="grid-x grid-padding-x small-up-1 medium-up-2">
+		<div class="grid-x grid-padding-x small-up-1 medium-up-2" data-equalizer data-equalize-on="medium">
 			
 			<?php if( have_rows('services') ):?>
 				<?php while ( have_rows('services') ) : the_row();?>	
@@ -29,12 +30,15 @@
 							<div class="cell single-service theme-<?php the_sub_field('color_theme');?>">
 								<div class="inner text-left">
 									
-									<div class="top">
+									<div class="top" data-equalizer-watch>
 										
 										<h2><?php the_sub_field('heading');?></h2>
 										
 										<p><?php the_sub_field('copy');?></p>
-										
+																	
+									</div>
+									
+									<div class="bottom">
 										
 										<div class="icon-wrap">
 											
@@ -73,10 +77,7 @@
 											<?php endif;?>
 											
 										</div>
-										
-									</div>
 									
-									<div class="bottom">
 										
 										<?php 
 										$image = get_sub_field('image');
