@@ -14,7 +14,7 @@ h2.small-heading,
 .h2.small-heading,
 h3.small-heading,
 .h3.small-heading {
-	font-size: 1.35593rem;
+	font-size: 1.8125rem;
 	line-height: 1;
 	text-transform: uppercase;
 	font-family: $font-alt;
@@ -67,7 +67,8 @@ h3.xl-heading,
 p.large-copy,
 .large-copy p,
 .large-copy ul,
-.large-copy ol {
+.large-copy ol,
+.large-copy {
 	font-size: 19px;
 	line-height: 1.6842;
 }
@@ -148,7 +149,7 @@ COMMON ELEMENTS
 	}
 }
 
-button,
+button:not(.submenu-toggle),
 .button {
 	min-width: 250px;
 	font-weight: 400;

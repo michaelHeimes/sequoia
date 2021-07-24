@@ -17,6 +17,11 @@ header.header {
 			    margin: .5rem 0 .55rem 1.25rem;
 			    a {
 				    color: $white;
+				    
+				&:hover {
+					text-decoration: underline;
+				}
+				    
 			    }
 			    
 			&:last-child a {
@@ -49,9 +54,10 @@ header.header {
 			
 			&.desktop {
 				a {
+					padding: 0;
 					display: inline-block;
 					position: relative;
-				    top: -31px;
+				    top: -20px;
 				}
 			}
 			
@@ -202,5 +208,72 @@ header.header {
 	
 	}
 		
+}
+
+#offcanvas-nav {
+	padding-top: 1rem;
+	
+	> li {
+		
+		> a {
+			padding: 1rem;
+		}
+		
+	&:not(.util-nav) {
+		a {
+			font-family: $font-alt;
+			color: $brand-green;
+			font-size: rem-calc(22);
+			text-transform: uppercase;
+			letter-spacing: .075px;			
+		}
+	}
+	
+	&.menu-item-has-children {
+		
+		button.submenu-toggle {
+			height: 54px;
+			
+			&:after {
+				margin-top: -5px;
+				width: 13px;
+				height: 8px;
+				border: 0;
+				background-size: contain;
+			    background-position: center;
+			    background-repeat: no-repeat;						
+				background-image: url(../images/chev-down-green.svg);				
+			}
+			
+		}
+		
+	}
+	
+		> ul.submenu {
+			padding-left: 2rem;
+			
+			li {
+				a {
+					color: $brand-green;
+					font-size: rem-calc(16);
+					font-family: $body-font-family;
+					text-transform: none;
+					padding: .7rem 1.45rem .95rem;
+					letter-spacing: 0;
+					
+				&:hover {
+					background-color: $black;
+					color: white;
+					text-decoration: none;
+				}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
 }
 

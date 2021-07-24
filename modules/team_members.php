@@ -28,7 +28,7 @@
 							
 						<a href="#" class="accordion-title">
 							<div class="grid-x grid-padding-x align-middle">
-								<div class="left cell shrink">
+								<div class="left cell small-12 medium-shrink">
 									<?php 
 									$image = get_field('photo');
 									if( !empty( $image ) ): ?>
@@ -46,7 +46,7 @@
 						
 						<div class="accordion-content" data-tab-content>
 							<div class="top grid-x grid-padding-x">
-								<div class="left cell shrink"></div>
+								<div class="left cell small-12 medium-shrink"></div>
 								<div class="right cell auto">
 									<div class="numbers">
 										<?php if( $d_number = get_field('direct_phone_number') ):?>

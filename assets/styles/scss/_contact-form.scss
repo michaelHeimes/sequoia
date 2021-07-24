@@ -10,19 +10,27 @@
 			
 		}
 	}
-	
-	.gform_wrapper.gravity-theme .gform_fields {
-		grid-column-gap: 35px;
-		grid-row-gap: 42px;
+		
+	@media (max-width: 640px) {
+		.gform_wrapper.gravity-theme .ginput_complex .name_first {
+			margin-bottom: 42px;
+		}
+		
+		.gform_wrapper.gravity-theme .ginput_complex .name_last {
+			margin-bottom: 0;
+		}	
 	}
 	
 	@media (min-width: 641px) {
 		.gform_wrapper.gravity-theme .ginput_complex:not(.ginput_container_address) fieldset:not([style*="display:none"]):not(.ginput_full), .gform_wrapper.gravity-theme .ginput_complex:not(.ginput_container_address) span:not([style*="display:none"]):not(.ginput_full) {
 		    padding-right: 17px;
 		}
-	}
-	
-	@media (min-width: 641px) {
+
+		.gform_wrapper.gravity-theme .gform_fields {
+			grid-column-gap: 35px;
+			grid-row-gap: 42px;
+		}
+
 		.gform_wrapper.gravity-theme .ginput_complex:not(.ginput_container_address) fieldset:not([style*="display:none"]):not(.ginput_full)~span:not(.ginput_full), .gform_wrapper.gravity-theme .ginput_complex:not(.ginput_container_address) span:not([style*="display:none"]):not(.ginput_full)~span:not(.ginput_full) {
 		    padding-left: 18px;
 		    padding-right: 0;

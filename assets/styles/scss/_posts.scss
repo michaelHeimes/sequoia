@@ -93,6 +93,50 @@
 	
 }
 
+.single-ad_property {
+	
+	.entry-content.post-content {
+		.large-colored-copy {
+			
+			h2 {
+				margin-top: 0;
+			}
+			
+			p,
+			ul,
+			ol {
+				font-size: rem-calc(23);
+				color: $brand-red;
+			}
+			
+			p {
+				margin-bottom: .4em;
+			}
+			
+		}
+		
+		.wp-block-buttons {
+			justify-content: center;
+			margin-top: 6.65rem;
+			margin-bottom: 4.8rem;
+			
+			.wp-block-button__link {
+				background-color: transparent;
+				border: 2px solid $brand-red;
+				color: $brand-red;
+				
+				&:hover {
+					background-color: $brand-red;
+					color: $white;
+				}
+				
+			}
+			
+		}
+	}
+	
+}
+
 .post-type-archive-ad_property,
 .tax-ad_prop_type {
 	

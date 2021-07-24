@@ -37,6 +37,9 @@
 			.right {
 				padding-left: 3rem;
 				padding-bottom: 3rem;
+				display: flex;
+			    flex-direction: column;
+			    justify-content: space-between;
 				
 				@include breakpoint(medium) {
 					padding-left: 64px;

@@ -3,16 +3,16 @@
 		<div class="grid-x grid-padding-x">
 			<div class="cell small-12 tablet-10 tablet-offset-1 large-8 large-offset-2">
 				
-				<div class="grid-x grid-padding-x">
-					<div class="cell small-12 medium-6">
+				<div class="grid-x grid-padding-x large-copy">
+					<div class="left cell small-12 medium-6">
 						<h2><?php the_sub_field('location_heading');?></h2>
 						<div><a href="<?php the_field('directions_url', 'option');?>" target="_blank"><?php the_field('address', 'option');?></a></div>			
 					</div>
-					<div class="cell small-12 medium-6">
+					<div class="right cell small-12 medium-6">
 						<h2><?php the_sub_field('contact_heading');?></h2>
-						<div>Phone: <?php the_field('phone_number', 'option');?><a href="tel:"><?php the_field('phone_number', 'option');?></a></div>
+						<div>Phone: <a href="tel:"<?php the_field('phone_number', 'option');?>><?php the_field('phone_number', 'option');?></a></div>
 						<div>Fax: <?php the_field('fax_number', 'option');?></div>
-						<div>Email: <a href="mailto:<?php the_field('email', 'option');?>"><?php the_field('email', 'option');?></a></div>						
+						<div>Email: <a href="mailto:<?php the_field('email_address', 'option');?>"><?php the_field('email_address', 'option');?></a></div>						
 					</div>					
 				</div>
 				

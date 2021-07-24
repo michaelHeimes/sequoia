@@ -128,7 +128,7 @@
 		
 	}
 	
-// 	Sliders
+// 	Utility Sliders
 	if( $('.utility-slider').length ) {
 	
 		
@@ -141,7 +141,7 @@
 			var $navRight = $(this).find('.slider-nav-wrap').find('.slick-next');
 
 			$imageSlider.slick({
-				autoplay: false,
+				autoplay: true,
 				autoplaySpeed: sliderTimer,
 				speed: 1000,
 				arrows: true,
@@ -168,6 +168,33 @@
 				});
 			
 			}
+			
+		});	
+	  
+	}
+
+// 	Testimonial Sliders
+	if( $('.testimonial-slider').length ) {
+	
+		
+		$('.testimonial-slider').each( function(i) {
+			
+			var sliderTimer = 5000;
+			var $testimonialSlider = $(this).find('.t-slider');
+			var $navLeft = $(this).find('.slick-prev');
+			var $navRight = $(this).find('.slick-next');
+
+			$testimonialSlider.slick({
+				autoplay: false,
+				autoplaySpeed: sliderTimer,
+				speed: 300,
+				arrows: true,
+				dots: false,
+				fade: true,
+				adaptiveHeight: false,
+				prevArrow: $navLeft,
+				nextArrow: $navRight,				
+			});
 			
 		});	
 	  

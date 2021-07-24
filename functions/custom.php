@@ -91,7 +91,7 @@ function hwl_home_pagesize( $query ) {
         return;
     }
 
-    if ( ! is_admin() && $query->is_main_query() && is_taxonomy( 'ad_prop_type' ) ) {
+    if ( ! is_admin() && $query->is_main_query() && is_tax( 'ad_prop_type' ) ) {
         $query->set( 'posts_per_page', 9999999 );
         return;
     }

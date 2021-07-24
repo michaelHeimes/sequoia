@@ -7,18 +7,36 @@
 	}
 	
 	.accordion-item {
-		padding: 3.5rem 0 3.6rem;
+		padding: 2.5rem 0 2.6rem;
 		margin-top: -1px;
 		border-top: 1px solid $dark-gray;
 		border-bottom: 1px solid $dark-gray;
 		
-		a.accordion-title:before {
-			content: '';
-			width: 39px;
-			height: 39px;
-			background-image: url(../images/accordion-chev.svg);
-			transform: translateY(-50%) rotateX(0deg);
-			transition: transform .4s;
+		@include breakpoint(medium) {
+			padding: 3.5rem 0 3.6rem;
+		}
+		
+		a.accordion-title{
+			padding: 0;
+			color: $black;
+			
+			&:focus {
+				color: $black;
+			}
+			
+			@include breakpoint(medium) {
+				padding: 0 3.1rem;
+			}
+			
+			&:before {
+				content: '';
+				width: 39px;
+				height: 39px;
+				background-image: url(../images/accordion-chev.svg);
+				transform: translateY(-50%) rotateX(0deg);
+				transition: transform .4s;
+			}
+			
 		}
 		
 	&.is-active {
@@ -32,6 +50,12 @@
 			height: 88px;
 			border-radius: 100%;
 			overflow: hidden;
+			margin-bottom: .8rem;
+			
+			@include breakpoint(medium) {
+				margin-bottom: 0;
+			}
+			
 		}
 		
 		h2.h3 {
@@ -46,13 +70,26 @@
 		}
 		
 		.accordion-content {
+			padding: 1rem 0 .05rem;
+			
+			@include breakpoint(medium) {
+				padding: 1rem 3.1rem .05rem;
+			}
+			
 			.top {
 				.left {
-					width: 128px;
+					@include breakpoint(medium) {
+						width: 128px;
+					}
 				}
 				
 				.right {
 					font-size: rem-calc(17);
+					
+					.numbers a {
+						white-space: nowrap;
+					}
+					
 					a {
 						color: $black;
 					}
