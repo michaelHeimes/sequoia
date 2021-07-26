@@ -168,11 +168,15 @@
 				background-color: $black;
 			}
 			
+			svg {
+				transform: translateX(1px);
+			}
+			
 		&:first-child {
 			margin-left: 0;
 			
 			svg {
-				transform: rotateY(180deg);
+				transform: rotateY(180deg) translateX(1px);
 			}
 		}
 			
@@ -183,14 +187,19 @@
 		padding-top: 2.5rem;
 		
 		.button {
-			padding-top: 2.1rem;
-			padding-bottom: 1.82rem;
+			padding-top: 2.25rem;
+			padding-bottom: 2rem;
 			width: 100%;
-			border: 2px solid $brand-green;
+			border-width: 0;
 			
 			&:hover {
-				color: $brand-green;
-				background-color: $white;
+				color: $white !important;
+				background-color: $black !important;
+			}
+			
+			svg {
+				transform: translateY(-1px);
+				margin-left: .2rem;
 			}
 			
 		}

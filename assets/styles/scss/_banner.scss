@@ -1,7 +1,12 @@
 .home .banner {
+	overflow: hidden;
 	min-height: 507px;
 	padding-top: 4.7rem;
     padding-bottom: 14.4rem;
+    
+	.bg {
+		bottom: -200px;
+	}
 	
 	h1 {
 		color: $white;
@@ -19,6 +24,8 @@
 
 .banner {
 	color: $white;
+	
+
 	
 	h1 {
 		color: $white;

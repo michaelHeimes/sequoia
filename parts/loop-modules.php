@@ -62,9 +62,9 @@
 	
 	endif;?>
 
-	<?php if ( get_row_layout() == 'wysiwyg_editor' ) : 
+	<?php if ( get_row_layout() == 'wysiwyg' ) : 
 	
-		get_template_part('modules/wysiwyg_editor');
+		get_template_part('modules/wysiwyg');
 	
 	endif;?>
 	

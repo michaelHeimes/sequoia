@@ -146,7 +146,11 @@
 			    $link_target = $link['target'] ? $link['target'] : '_self';
 			    ?>
 			<div class="bottom-btn-wrap cell small-12">
-			    <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+			    <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?>
+			    	<svg xmlns="http://www.w3.org/2000/svg" width="9.772" height="16.715" viewBox="0 0 9.772 16.715">
+						<path id="Path_132" data-name="Path 132" d="M1815.5,3936.5l7.65,7.65-7.65,7.651" transform="translate(-1814.793 -3935.793)" fill="none" stroke="#fff" stroke-width="2"/>
+					</svg>
+			    </a>
 			</div>
 			<?php endif; ?>					
 

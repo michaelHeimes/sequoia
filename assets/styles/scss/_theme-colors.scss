@@ -71,6 +71,11 @@
 		}
 	}
 	
+	.utility-slider .bottom-btn-wrap .button {
+		background-color: $brand-blue;
+		border-color: $brand-blue;
+	}
+	
 }
 
 .theme-purple {
@@ -144,6 +149,11 @@
 			color: $brand-purple;
 			border-color: $brand-purple;
 		}
+	}
+	
+	.utility-slider .bottom-btn-wrap .button {
+		background-color: $brand-purple;
+		border-color: $brand-purple;
 	}
 	
 	
@@ -223,6 +233,11 @@
 			color: $brand-red;
 			border-color: $brand-red;
 		}
+	}
+	
+	.utility-slider .bottom-btn-wrap .button {
+		background-color: $brand-red;
+		border-color: $brand-red;
 	}
 	
 }

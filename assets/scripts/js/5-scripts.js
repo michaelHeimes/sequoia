@@ -45,6 +45,24 @@
 // 	Block Hacks
 	$('.wp-block-button__link').addClass('button');
 	
+	
+// 	Banner Parallax
+	if ($('body').hasClass('home')) {
+		
+		var $bg = $('.banner').find('.bg');
+		
+	    gsap.to($bg , {
+	      y: -200,
+	      ease: "none",
+	      scrollTrigger: {
+	        trigger: '.banner' ,
+	        start: -116,
+			end: "bottom top",
+	        scrub: true
+	      }
+	    });		
+	}
+	
 
 // Three Column Stats Count Up
 	if ($('.three_column_stats').length) {
