@@ -61,6 +61,7 @@
 					font-size: 32px;
 					font-family: $header-font-family;
 					color: $black;
+					letter-spacing: 0;
 					
 					@include breakpoint(medium) {
 						margin-top: 2.3rem;

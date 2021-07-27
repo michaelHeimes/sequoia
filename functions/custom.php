@@ -136,3 +136,9 @@ function add_menu_link_class( $atts, $item, $args ) {
   return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
+
+
+add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
+function form_submit_button( $button, $form ) {
+    return "<button class='button gform_button' id='gform_submit_button_{$form['id']}'><span>Submit</span><svg xmlns='http://www.w3.org/2000/svg' width='9.772' height='16.715' viewBox='0 0 9.772 16.715'><path id='Path_132' data-name='Path 132' d='M1815.5,3936.5l7.65,7.65-7.65,7.651' transform='translate(-1814.793 -3935.793)' fill='none' stroke='#fff' stroke-width='2'/></svg></button>";
+}

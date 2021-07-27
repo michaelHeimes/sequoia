@@ -127,6 +127,12 @@ header.header {
 					}
 				}
 				
+			&:not(.available-properties) {
+				ul.submenu {
+					right: 1.2rem;
+				}
+			}
+				
 			&.available-properties {
 				a {
 					color: $brand-green;

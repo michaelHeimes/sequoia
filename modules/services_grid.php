@@ -94,7 +94,12 @@
 										    $link_title = $link['title'];
 										    $link_target = $link['target'] ? $link['target'] : '_self';
 										    ?>
-										    <a class="button text-center" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+										    <a class="button text-center" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+											    <span><?php echo esc_html( $link_title ); ?></span>
+												<svg xmlns="http://www.w3.org/2000/svg" width="9.772" height="16.715" viewBox="0 0 9.772 16.715">
+													<path id="Path_132" data-name="Path 132" d="M1815.5,3936.5l7.65,7.65-7.65,7.651" transform="translate(-1814.793 -3935.793)" fill="none" stroke="#fff" stroke-width="2"/>
+												</svg>
+											</a>
 										<?php endif; ?>
 										
 									</div>

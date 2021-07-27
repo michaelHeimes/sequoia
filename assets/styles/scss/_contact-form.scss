@@ -42,7 +42,13 @@
 		margin-bottom: 3.35rem;
 	}
 	
-	.gform_wrapper.gravity-theme .gform_footer button, .gform_wrapper.gravity-theme .gform_footer input, .gform_wrapper.gravity-theme .gform_page_footer button, .gform_wrapper.gravity-theme .gform_page_footer input {
+	.gform_wrapper.gravity-theme .gform_footer button, .gform_wrapper.gravity-theme .gform_footer input, .gform_wrapper.gravity-theme .gform_page_footer button, .gform_wrapper.gravity-theme .gform_page_footer button {
 		width: 100%;
+		
+		svg {
+			transform: translateY(-1px);
+			margin-left: .2rem;
+		}
+		
 	}
 }

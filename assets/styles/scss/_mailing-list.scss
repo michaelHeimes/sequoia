@@ -46,7 +46,7 @@
 		padding-top: 2.45rem;
 	}
 		
-	.gform_wrapper.gravity-theme .gform_footer button, .gform_wrapper.gravity-theme .gform_footer input, .gform_wrapper.gravity-theme .gform_page_footer button, .gform_wrapper.gravity-theme .gform_page_footer input {
+	.gform_wrapper.gravity-theme .gform_footer button, .gform_wrapper.gravity-theme .gform_footer input, .gform_wrapper.gravity-theme .gform_page_footer button, .gform_wrapper.gravity-theme .gform_page_footer button {
 		width: 100%;
 		background-color: $white;
 		color: $brand-blue;
@@ -54,6 +54,16 @@
 		&:hover {
 			background-color: $black;
 			color: $white;
+		}
+		
+		svg {
+			transform: translateY(-1px);
+			margin-left: .2rem;
+			
+			path {
+				stroke: $brand-blue;
+			}
+			
 		}
 		
 	}
