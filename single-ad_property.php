@@ -13,21 +13,21 @@ get_header(); ?>
 	
 			<main class="main cell small-12 tablet-10 tablet-offset-1 large-8 large-offset-2" role="main">
 				
-
-				
+				<?php 
+					$ad_prop_terms = get_the_terms( $post->ID , 'ad_prop_type' );
+					if ( $ad_prop_terms ):?>
 				<div class="post-tag-wrap text-center">
-					<?php 
-						$ad_prop_terms = get_the_terms( $post->ID , 'ad_prop_type' );
-						
-						foreach ($ad_prop_terms as $term): 
-						$link = get_term_link($term);
-						$icon = get_field('icon', $term);
-					?>
-					<a class="button" aria-label="<?php echo $term->name; ?> Archive Link" href="<?php echo $link;?>">
-						<span class="theme-name"><?php echo $term->name; ?></span>
-					</a>
-					<?php endforeach;?>
+				<?php
+					foreach ($ad_prop_terms as $term): 
+					$link = get_term_link($term);
+					$icon = get_field('icon', $term);
+				?>
+				<a class="button" aria-label="<?php echo $term->name; ?> Archive Link" href="<?php echo $link;?>">
+					<span class="theme-name"><?php echo $term->name; ?></span>
+				</a>
+				<?php endforeach;?>
 				</div>
+				<?php endif;?>
 			
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			

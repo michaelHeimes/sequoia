@@ -4,7 +4,6 @@
 	.post-tag-wrap {
 		position: relative;
 		margin-top: -20px;
-		margin-bottom: 3.9rem;
 		
 		.button {
 			font-size: rem-calc(16);
@@ -94,6 +93,10 @@
 }
 
 .single-ad_property {
+	
+	.entry-title {
+		padding-top: 3.9rem;
+	}
 	
 	.entry-content.post-content {
 		.large-colored-copy {
@@ -252,6 +255,7 @@
 		color: $brand-green;
 		font-size: rem-calc(15);
 		font-weight: 500;
+		padding-top: 3.9rem;
 		padding-bottom: .8rem;
 	}
 	h2.entry-title {

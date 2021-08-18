@@ -56,7 +56,7 @@ function my_acf_json_load_point( $paths ) {
     
     
     // append path
-    $paths[] = get_stylesheet_directory() . '/my-custom-folder';
+    $paths[] = get_stylesheet_directory() . '/acf-json';
     
     
     // return
@@ -112,9 +112,15 @@ function exclude_featured_news_post( $query ) {
         return;
 
     if ( $query->is_archive() ) {
-	    $selected_posts = array_merge(
-		get_field('featured_article', 73, false));	    
-        $query->set( 'post__not_in', array( $selected_posts[0] ) );
+	    $featured = get_field('featured_article', 73, false);
+	    
+	    if($featured) {
+	    
+		    $selected_posts = array_merge(
+			$featured);	    
+	        $query->set( 'post__not_in', array( $selected_posts[0] ) );
+        
+        }
     }
 }
 add_action( 'pre_get_posts', 'exclude_featured_news_post', 1 );

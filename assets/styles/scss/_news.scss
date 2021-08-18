@@ -24,12 +24,9 @@
 			@include breakpoint(tablet) {
 				padding: 0 3.95rem 4.4rem;	
 			}
-			
-			.tag-wrap {
-				margin-bottom: 2.3rem;
-			}
-			
+						
 			p.byline {
+				padding-top: 2.3rem;
 				margin-bottom: 1.65rem;
 			}
 

@@ -29,16 +29,20 @@ get_header(); ?>
 							        // Setup this post for WP functions (variable must be named $post).
 							        setup_postdata($post); 
 							        $terms = get_the_terms( $post->ID, 'news_type' ); 
+							        if ( $terms ):
 							        $first_term = $terms[0];
 							        $link = get_term_link($first_term);
 							        $name =  $first_term->name;
+							        endif;
 							        ;?>
 							        							        
 									<article id="post-<?php the_ID(); ?>" <?php post_class('cell small-12 featured'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 										<div class="inner gray-bg">
 															
 											<div class="tag-wrap">
+												<?php if ( $terms ):?>
 												<a class="tag" href="<?php echo $link;?>"><?php echo $name;?></a>
+												<?php endif;?>
 											</div>
 															
 											<header class="article-header">	

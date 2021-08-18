@@ -39,9 +39,18 @@
 			}
 			
 			.number {
-				font-size: 109px;
+				font-size: rem-calc(75);
 				line-height: 1;
 				font-family: $font-alt;
+				
+				@include breakpoint (tablet) {
+					font-size: rem-calc(60);
+				}
+
+				@include breakpoint (large) {
+					font-size: rem-calc(75);
+				}
+				
 			}
 			
 			.text {

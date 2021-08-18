@@ -7,31 +7,29 @@
 				<div class="bg show-for-medium" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );?>)"></div>
 			
 			<?php else:?>
+				
+				<?php 
+				$image = get_field('post_row_fallback_image', 'option');
+				if( !empty( $image ) ): ?>
+				<div class="bg show-for-medium" style="background-image: url(<?php echo esc_url($image['url']); ?>)"></div>
+				<?php endif; ?>
 			
-				<div class="bg show-for-medium">
+			<?php endif;?>
+			
+			<div class="thumb-wrap hide-for-medium">
+				<?php if ( has_post_thumbnail() ):?>
+					
+					<?php the_post_thumbnail('full'); ?>
+				
+				<?php else:?>
+				
 					<?php 
 					$image = get_field('post_row_fallback_image', 'option');
 					if( !empty( $image ) ): ?>
 					    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 					<?php endif; ?>
-				</div>
-				
-			<?php endif;?>
-			
-			<div class="thumb-wrap hide-for-medium">
-			<?php if ( has_post_thumbnail() ):?>
-				
-				<?php the_post_thumbnail('full'); ?>
-			
-			<?php else:?>
-			
-				<?php 
-				$image = get_field('post_row_fallback_image', 'option');
-				if( !empty( $image ) ): ?>
-				    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-				<?php endif; ?>
-				
-			<?php endif;?>
+					
+				<?php endif;?>
 			</div>
 		
 		</div>
@@ -41,13 +39,17 @@
 			<div class="top">
 				<?php
 					$terms = get_the_terms( $post->ID, 'news_type' ); 
+					if ( $terms ):
 			        $first_term = $terms[0];
 			        $link = get_term_link($first_term);
 			        $name =  $first_term->name;
+			        endif;
 				?>
-
+				
 				<div class="tag-wrap">
+					<?php if ( $terms ):?>
 					<a class="tag" href="<?php echo $link;?>"><?php echo $name;?></a>
+					<?php endif;?>
 				</div>
 				
 				<?php get_template_part( 'parts/content', 'news-byline' ); ?>
