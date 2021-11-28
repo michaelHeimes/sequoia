@@ -23,7 +23,7 @@
 		        'post_type' => 'news_post',
 		        'post_status' => 'publish',
 		        'posts_per_page' => 3, 
-			    'order' => 'ASC'
+			    'order' => 'DESC'
 			);
 			
 			$loop = new WP_Query( $args ); 
