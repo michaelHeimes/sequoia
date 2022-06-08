@@ -11,7 +11,7 @@ get_header(); ?>
 			
 	<div class="content">
 		
-		<?php get_template_part('parts/banner', 'news');?>
+		<?php get_template_part('parts/banner', 'default');?>
 					
 		<div class="inner-content">
 	

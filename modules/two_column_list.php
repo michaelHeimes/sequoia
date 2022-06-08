@@ -26,11 +26,8 @@
 					
 					<?php while ( have_rows('list') ) : the_row();?>	
 					
-		
-					
 					<?php if( have_rows('single_row') ):?>
 						<?php while ( have_rows('single_row') ) : the_row();?>	
-						
 							
 								<?php
 									$link = get_sub_field('link');

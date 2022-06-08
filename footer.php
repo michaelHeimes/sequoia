@@ -9,7 +9,7 @@
  ?>
 	
 				<?php if( !get_field('hide_mailing_list_signup') ):?>
-				<div class="mailing-list has-bg">
+				<div class="mailing-list has-bg dark-green-bg">
 					<div class="bg" style="background-image: url(<?php the_field('background_image', 'option');?>)"></div>
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">

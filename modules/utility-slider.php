@@ -123,13 +123,13 @@
 				<span></span>
 			</div>
 
-			<div class="slider-nav-wrap cell shrink">
-				<button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">
+			<div class="slider-nav-wrap green-bg-btn-wrap cell shrink">
+				<button class="slick-prev slick-arrow green-circle" aria-label="Previous" type="button" style="">
 					<svg xmlns="http://www.w3.org/2000/svg" width="9.772" height="16.715" viewBox="0 0 9.772 16.715">
 					  <path id="Path_132" data-name="Path 132" d="M1815.5,3936.5l7.65,7.65-7.65,7.651" transform="translate(-1814.793 -3935.793)" fill="none" stroke="#fff" stroke-width="2"/>
 					</svg>
 				</button>
-				<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">
+				<button class="slick-next slick-arrow green-circle" aria-label="Next" type="button" style="">
 					<svg xmlns="http://www.w3.org/2000/svg" width="9.772" height="16.715" viewBox="0 0 9.772 16.715">
 					  <path id="Path_132" data-name="Path 132" d="M1815.5,3936.5l7.65,7.65-7.65,7.651" transform="translate(-1814.793 -3935.793)" fill="none" stroke="#fff" stroke-width="2"/>
 					</svg>

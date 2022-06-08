@@ -146,44 +146,6 @@
 	
 	}
 	
-	.slider-nav-wrap {
-		width: 136px;
-		display: flex;
-	    justify-content: center;
-	    align-items: center;
-	    
-		button {
-			cursor: pointer;
-			margin-left: 18px;
-			min-width: 0;
-			min-width: 39px;
-			height: 39px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border-radius: 100%;
-			background-color: $brand-green;
-			transition: background-color .25s ease-out;
-			
-			&:hover {
-				background-color: $black;
-			}
-			
-			svg {
-				transform: translateX(1px);
-			}
-			
-		&:first-child {
-			margin-left: 0;
-			
-			svg {
-				transform: rotateY(180deg) translateX(1px);
-			}
-		}
-			
-		}
-	}
-	
 	.bottom-btn-wrap {
 		padding-top: 2.5rem;
 		

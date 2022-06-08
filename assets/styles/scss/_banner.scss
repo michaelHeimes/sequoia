@@ -1,18 +1,91 @@
 .home .banner {
-	overflow: hidden;
-	min-height: 507px;
-	padding-top: 4.7rem;
-    padding-bottom: 14.4rem;
+	//overflow: hidden;
+	//min-height: 507px;
     
-	.bg {
-		bottom: -200px;
+	.bg.color-bg {
+		bottom: 54px;
+		background-color: $brand-dark-green;
+	}
+	
+	.left {	
+		padding-top: 5.3rem;
+		min-height: 0;
+		.pt-wrap {
+			height: auto;
+		}
 	}
 	
 	h1 {
 		color: $white;
 		font-weight: bold;
 		padding-top: 0;
-		padding-bottom: 7.2rem;
+		padding-bottom: 2.2rem;
+	}
+	
+	.service-nav-dropdown {
+		position: relative;
+		display: inline-flex;
+		flex-direction: column;
+		button {
+			display: flex;
+			align-items: center;
+			padding: .71em .85em .56em 1.45em;
+			box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+			// @include breakpoint(tablet only) {
+			// 	font-size: 1.2rem;
+			// 	letter-spacing: 2px;
+			// }
+			span {
+				display: inline-block;
+				margin-right: 1.5rem;
+			}
+			&:hover + ul {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+		ul.links {
+			visibility: hidden;
+			opacity: 0;
+			box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+			&:hover {
+				visibility: visible;
+				opacity: 1;
+			}
+			@include breakpoint(medium down) {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+			}
+		}
+		a {
+			color: $brand-green;
+			background-color: $white;
+			padding: .75rem 2.283rem .75rem 1.35rem;
+			font-size: 1rem;
+			text-transform: none;
+			border-top: 1px solid #00733c;
+			letter-spacing: 0;
+
+			&:hover {
+				text-decoration: none;
+				background-color: $black;
+				color: white;
+			}
+		
+		}	
+		
+		&.is-active > a {
+			background-color: $white;
+			
+			&:hover {
+				background-color: $black;
+				color: white;
+				text-decoration: none;
+			}
+			
+		}
 	}
 	
 	a.button:hover {
@@ -24,14 +97,71 @@
 
 .banner {
 	color: $white;
+	.bg.color-bg {
+		background-color: $brand-gray;
+	}
 	
-
+	.inner {
+		//max-width: 1258px;
+		margin: auto;
+	}
+	
+	.pt-wrap {
+		@include breakpoint(tablet) {
+			min-height: 145px;
+			height: 100%;
+		}
+		.banner-icon-wrap {
+			position: absolute;
+			margin: auto;
+			z-index: 1;
+			top: 50%;
+			transform: translateY(-50%) translateX(calc(50% + 1.25rem));
+			right: -1.25rem;
+			width: 103px;
+			height: 103px;
+			border: 9px solid $brand-gray;
+			border-radius: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 	
 	h1 {
-		color: $white;
+		color: $brand-green;
 		font-weight: bold;
-		padding-top: 6.7rem;
-		padding-bottom: 8.45rem;
+		padding-top: 4rem;
+		padding-bottom: 4rem;
 	}
+	
+	.left {
+		@include breakpoint(tablet) {
+			min-height: 505px;
+		}
+	}
+	.right {
+		@include breakpoint(medium down) { 
+			margin-top: 2rem;
+		}
+		.bg {
+			left: 1.25rem;
+		}
+		grid-
+		img {
+			margin-left: -1.25rem;
+			margin-right: -1.25rem;
+			max-width: calc(100% + 2.5rem);
+		}
+	}
+	
+&.default {
+	h1 {
+		color: $white;
+		margin: 0;
+		padding-top: 6.185rem;
+		padding-bottom: 6.185rem;
+	}
+}
 	
 }

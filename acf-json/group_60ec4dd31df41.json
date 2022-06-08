@@ -58,7 +58,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "array",
             "preview_size": "medium",
             "library": "all",
             "min_width": "",
@@ -86,6 +86,21 @@
                 "param": "page",
                 "operator": "!=",
                 "value": "73"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "71"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "75"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "681"
             }
         ]
     ],
@@ -100,5 +115,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1626964682
+    "modified": 1654638465
 }

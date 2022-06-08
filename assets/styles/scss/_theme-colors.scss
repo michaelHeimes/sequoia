@@ -1,5 +1,18 @@
+.theme-green {
+	.banner h1 {
+		color: $brand-green;
+	}
+	.banner-icon-wrap,
+	.icon-wrap,
+	a.button:not(.outline) {
+		background-color: $brand-green;
+	}
+}
+
 .theme-blue {
-	
+	.banner h1 {
+		color: $brand-blue;
+	}
 	h2,
 	.h2,
 	.small-heading,
@@ -79,7 +92,9 @@
 }
 
 .theme-purple {
-
+	.banner h1 {
+		color: $brand-purple;
+	}
 	h2,
 	.h2,
 	.small-heading,
@@ -163,7 +178,9 @@
 .tax-ad_prop_type,
 .single-ad_property,
 .theme-red {
-	
+	.banner h1 {
+		color: $brand-red;
+	}
 	h2,
 	.h2,
 	.small-heading,
@@ -250,7 +267,7 @@
 			color: $brand-blue;
 		}
 		.icon-wrap,
-		a.button {
+		a.button:not(.outline) {
 			background-color: $brand-blue;
 		}
 		
@@ -263,7 +280,7 @@
 			color: $brand-purple;
 		}
 		.icon-wrap,
-		a.button {
+		a.button:not(.outline) {
 			background-color: $brand-purple;
 		}
 
@@ -276,7 +293,7 @@
 			color: $brand-red;
 		}
 		.icon-wrap,
-		a.button {
+		a.button:not(.outline) {
 			background-color: $brand-red;
 		}
 

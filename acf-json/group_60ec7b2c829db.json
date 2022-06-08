@@ -7,7 +7,7 @@
             "label": "Background Image",
             "name": "background_image",
             "type": "image",
-            "instructions": "",
+            "instructions": "877px X 523px or 1754px X 876px.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "array",
             "preview_size": "medium",
             "library": "all",
             "min_width": "",
@@ -46,7 +46,50 @@
             "maxlength": ""
         },
         {
-            "key": "field_60ec7cac28177",
+            "key": "field_629d33ca837e1",
+            "label": "Service Navigation",
+            "name": "service_navigation",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Page",
+            "sub_fields": [
+                {
+                    "key": "field_629d33da837e2",
+                    "label": "Page",
+                    "name": "page",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_629e6366a2146",
             "label": "Button Link",
             "name": "button_link",
             "type": "link",
@@ -81,5 +124,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1626111153
+    "modified": 1654559808
 }

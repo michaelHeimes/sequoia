@@ -7,7 +7,7 @@ get_header(); ?>
 			
 <div class="content">
 	
-<?php get_template_part('parts/banner', 'news');?>
+<?php get_template_part('parts/banner', 'default');?>
 	<div class="grid-container">
 		<div class="inner-content grid-x grid-padding-x">
 	

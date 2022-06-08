@@ -47,21 +47,21 @@
 	
 	
 // 	Banner Parallax
-	if ($('body').hasClass('home')) {
-		
-		var $bg = $('.banner').find('.bg');
-		
-	    gsap.to($bg , {
-	      y: -200,
-	      ease: "none",
-	      scrollTrigger: {
-	        trigger: '.banner' ,
-	        start: -116,
-			end: "bottom top",
-	        scrub: true
-	      }
-	    });		
-	}
+	// if ($('body').hasClass('home')) {
+	// 	
+	// 	var $bg = $('.banner').find('.bg');
+	// 	
+	//     gsap.to($bg , {
+	//       y: -200,
+	//       ease: "none",
+	//       scrollTrigger: {
+	//         trigger: '.banner' ,
+	//         start: -116,
+	// 		end: "bottom top",
+	//         scrub: true
+	//       }
+	//     });		
+	// }
 	
 
 // Three Column Stats Count Up
@@ -190,6 +190,35 @@
 		});	
 	  
 	}
+
+// 	Overflowing Card Sliders
+	if( $('.overflowing-card-slider').length ) {
+	
+		
+		$('.overflowing-card-slider').each( function(i) {
+			
+			var sliderTimer = 5000;
+			var $imageSlider = $(this).find('.oc-slider');
+			var $navLeft = $(this).find('.slider-nav-wrap').find('.slick-prev');
+			var $navRight = $(this).find('.slider-nav-wrap').find('.slick-next');
+	
+			$imageSlider.slick({
+				//autoplay: true,
+				autoplaySpeed: sliderTimer,
+				speed: 1000,
+				arrows: true,
+				dots: false,
+				adaptiveHeight: false,
+				pauseOnFocus: false,
+				pauseOnHover: false,
+				prevArrow: $navLeft,
+				nextArrow: $navRight,
+			});
+			
+		});	
+	  
+	}
+
 
 // 	Testimonial Sliders
 	if( $('.testimonial-slider').length ) {

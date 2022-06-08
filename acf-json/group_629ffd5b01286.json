@@ -1,0 +1,64 @@
+{
+    "key": "group_629ffd5b01286",
+    "title": "Jobs",
+    "fields": [
+        {
+            "key": "field_629ffd64d2559",
+            "label": "Intro text",
+            "name": "intro_text",
+            "type": "textarea",
+            "instructions": "This appears when the accodion is closed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_629ffda5d255a",
+            "label": "Responsibilities",
+            "name": "responsibilities",
+            "type": "wysiwyg",
+            "instructions": "Use bulleted list.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "job"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1654706686
+}

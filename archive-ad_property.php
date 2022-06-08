@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The A&D Property Archive
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -12,15 +12,7 @@ get_header(); ?>
 	<div class="content">
 		
 		<?php get_template_part('parts/banner', 'ad-property');?>
-		
-		<?php 
-		$image = get_field('red_theme_icon', 'option');
-		if( !empty( $image ) ): ?>
-		<div class="banner-icon-wrap text-center">
-		    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-		</div>
-		<?php endif;?>
-		
+
 		<div class="articles-container grid-container">
 			<?php joints_ad_tax_nav();?>
 		</div>

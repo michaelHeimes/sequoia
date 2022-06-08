@@ -14,6 +14,18 @@
 	
 	endif;?>
 
+	<?php if ( get_row_layout() == 'current_openings' ) : 
+	
+		get_template_part('modules/current_openings');
+	
+	endif;?>
+	
+	<?php if ( get_row_layout() == 'faqs' ) : 
+	
+		get_template_part('modules/faqs');
+	
+	endif;?>
+
 	<?php if ( get_row_layout() == 'recent_news' ) : 
 	
 		get_template_part('modules/recent_news');
@@ -23,6 +35,12 @@
 	<?php if ( get_row_layout() == 'location_and_contact_info' ) : 
 	
 		get_template_part('modules/location_and_contact_info');
+	
+	endif;?>
+	
+	<?php if ( get_row_layout() == 'overflowing_card_slider' ) : 
+	
+		get_template_part('modules/overflowing_card_slider');
 	
 	endif;?>
 
@@ -59,6 +77,12 @@
 	<?php if ( get_row_layout() == 'two_column_list' ) : 
 	
 		get_template_part('modules/two_column_list');
+	
+	endif;?>
+
+	<?php if ( get_row_layout() == 'two_image_set' ) : 
+	
+		get_template_part('modules/two_image_set');
 	
 	endif;?>
 

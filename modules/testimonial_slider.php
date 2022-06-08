@@ -39,14 +39,15 @@
 									<?php if( have_rows('single_slide') ):?>
 										<?php while ( have_rows('single_slide') ) : the_row();?>	
 										
-										<div class="single-slide">
+									<div class="single-slide">
 											<div class="grid-x">
 												<div class="cell small-12">
 													<div class="quote-wrap">
-														"<?php the_sub_field('quote');?>"
-													</div class="author-wrap">
-													<div>—<?php the_sub_field('author');?><?php if( $title = get_sub_field('authors_title')):?>, <?php echo $title; endif?></div>
-											
+														<?php echo '"' .  the_sub_field('quote') . '"';?>
+													</div>
+													<div class="author-wrap">
+														<div>—<?php the_sub_field('author');?><?php if( $title = get_sub_field('authors_title')):?>, <?php echo $title; endif?></div>
+													</div>
 												</div>
 											</div>
 										</div>

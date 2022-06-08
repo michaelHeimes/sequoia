@@ -29,7 +29,7 @@
 	    <?php } ?>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.typekit.net/ida3khk.css">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 

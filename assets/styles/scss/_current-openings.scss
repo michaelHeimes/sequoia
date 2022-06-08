@@ -1,0 +1,49 @@
+.current-openings,
+.single-job .job-content {
+	padding-top: 5.2rem;
+	padding-bottom: 6.3rem;
+	h3 {
+		color: $brand-green;
+		font-size: rem-calc(41);
+		line-height: 1.17;
+	}
+	.accordion {
+		padding-top: 3rem;
+	}
+	.accordion-content,
+	.details {
+		h4 {
+			color: $brand-green;
+			font-size: rem-calc(22);
+			font-weight: 500;
+			font-style: italic;
+			margin-bottom: 0.75rem;
+		}
+		.list-wrap {
+			padding-bottom: 3rem;
+		}
+		ul {
+			list-style: none;
+			li {
+				position: relative;
+				margin-bottom: 1rem;
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 6px;
+				height: 6px;
+				border-radius: 100%;
+				background-color: $brand-green;
+				position: absolute;
+				top: 0.9rem;
+				left: -1.1rem;
+			}
+			}
+		}
+	}
+}
+.single-job .job-content {
+	.details {
+		padding-top: 2.15rem;
+	}
+}

@@ -7,6 +7,10 @@ Stylesheet: Global Stylesheet
 /*********************
 TYPOGRAPHY
 *********************/
+h1,
+.h1 {
+	line-height: 1.05769;
+}
 h2,
 .h2,
 .small-heading,
@@ -79,6 +83,13 @@ p.byline {
 	margin-bottom: .15em;
 }
 
+.m-italic,
+header.header .top-bar-util ul#utility-nav li a,
+header.header #top-bar-menu #main-nav>li.menu-item-has-children ul.submenu li a {
+	font-weight: 500;
+	font-style: italic;
+}
+
 /*********************
 COMMON ELEMENTS
 *********************/
@@ -133,6 +144,107 @@ COMMON ELEMENTS
 
 .page-contact .section {
     margin-bottom: 3.1rem;
+}
+
+.accordion-item {
+	padding: 2.5rem 0 2.6rem;
+	margin-top: -1px;
+	border-top: 1px solid $dark-gray;
+	border-bottom: 1px solid $dark-gray;
+	
+	@include breakpoint(medium) {
+		padding: 3.5rem 0 3.6rem;
+	}
+	
+	a.accordion-title {
+		color: $black;
+		
+		p {
+			margin: 0;
+		}
+		
+		&:focus {
+			color: $black;
+		}
+		
+		@include breakpoint(small only) {
+			padding-left: 0;
+		}
+		
+		&:before {
+			content: '';
+			width: 39px;
+			height: 39px;
+			background-image: url(../images/accordion-chev.svg);
+			transform: translateY(-50%) rotateX(0deg);
+			transition: transform .4s;
+		}
+		
+	}
+	
+&.is-active {
+	a.accordion-title:before {
+		transform: translateY(-50%) rotateX(180deg);
+	}
+}
+	
+	h2.h3 {
+		font-size: rem-calc(40);
+		line-height: 1.05;
+		text-transform: none;
+	}
+	
+	h3 {
+		font-size: rem-calc(22);
+		line-height: 1.1;			
+	}
+	
+	.accordion-content {
+		padding: 1rem 0 .05rem;
+		
+		@include breakpoint(medium) {
+			padding: 3.1rem 3.1rem .05rem;
+		}
+
+	}
+	
+}
+
+.slider-nav-wrap.green-bg-btn-wrap {
+	width: 136px;
+	display: flex;
+	align-items: center;
+	
+	button {
+		cursor: pointer;
+		margin-left: 18px;
+		min-width: 0;
+		min-width: 39px;
+		height: 39px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 100%;
+		background-color: $brand-green;
+		transition: background-color .25s ease-out;
+		
+		&:hover {
+			background-color: $black;
+		}
+		
+		svg {
+			transform: translateX(1px);
+		}
+		
+	&:first-child {
+		margin-left: 0;
+		
+		svg {
+			transform: rotateY(180deg) translateX(1px);
+		}
+	}
+		
+	}
 }
 
 .location_and_contact_info.section {
@@ -204,6 +316,10 @@ button:not(.submenu-toggle),
 	background-color: $brand-green;
 }
 
+.dark-green-bg {
+	background-color: $brand-dark-green;
+}
+
 .gray-bg {
 	background-color: $brand-gray;
 }
@@ -218,19 +334,6 @@ button:not(.submenu-toggle),
 		}
 		
 	}
-}
-
-.banner-icon-wrap {
-	position: relative;
-	width: 103px;
-	height: 103px;
-	margin: -53px auto 0;
-	border: 9px solid $white;
-	border-radius: 100%;
-	background-color: $brand-green;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 /*********************

@@ -1,11 +1,11 @@
 {
-    "key": "group_60f2f9ff8a9c3",
-    "title": "Hide Mailing List Signup",
+    "key": "group_629fc59e8b9c3",
+    "title": "Solid Green BG Banner",
     "fields": [
         {
-            "key": "field_60f2fa0b4b35b",
+            "key": "field_629fc59e912d9",
             "label": "",
-            "name": "hide_mailing_list_signup",
+            "name": "solid_green_bg_banner",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1654638077
+    "modified": 1654638066
 }
