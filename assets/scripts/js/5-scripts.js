@@ -247,6 +247,33 @@
 	  
 	}
 	
+	if( $('.job-share').length ) {
+		$('.job-share').each( function(i) {
+			let $jobShare = $(this);
+			let $btn = $($jobShare).find('.button');
+			let $icons = $($jobShare).find('.a2a_kit');
+			let $copyLink = $($jobShare).find('.copy-link');
+			
+			$($icons).slideUp(0);
+			
+			$($btn).click(function() {
+				$($jobShare).toggleClass('open');
+				$($icons).slideToggle(300);
+			});
+			
+			$($copyLink).click(function(e) {
+				e.preventDefault();
+				let $link = $(this).attr('data-link');
+				navigator.clipboard.writeText($link);
+				let $copied = document.createElement("span");
+				$copied.innerText = "copied!";
+				$(this).append($copied);
+				$($copied).addClass('animate');
+			});
+			
+		});
+	}
+	
 
 /*
 	if ( $('.fade-in-up').length) {

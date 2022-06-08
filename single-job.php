@@ -19,14 +19,7 @@ get_header(); ?>
 				<p><?php the_field('intro_text');?></p>
 				
 				<div class="details">
-					<div class="list-wrap">
-						<h4>Responsibilities</h4>
-						<?php the_field('responsibilities');?>
-					</div>
-					<div class="apply-wrap">
-						<h4>Apply</h4>
-						<p>Send your resume to <a href="mailto:careers@sequioarg.com?subject=<?php the_title() ?>">careers@sequioarg.com</a></p>
-					</div>
+					<?php get_template_part('parts/loop', 'job-details');?>
 				</div>
 			
 			</div>
@@ -36,5 +29,5 @@ get_header(); ?>
 		</div> <!-- end #inner-content -->
 	</div>
 </div> <!-- end #content -->
-
+<script async src="https://static.addtoany.com/menu/page.js"></script>
 <?php get_footer(); ?>

@@ -36,14 +36,7 @@
 							</a>
 							
 							<div class="accordion-content" data-tab-content>
-								<div class="list-wrap">
-									<h4>Responsibilities</h4>
-									<?php the_field('responsibilities');?>
-								</div>
-								<div class="apply-wrap">
-									<h4>Apply</h4>
-									<p>Send your resume to <a href="mailto:careers@sequioarg.com?subject=<?php the_title() ?>">careers@sequioarg.com</a></p>
-								</div>
+								<?php get_template_part('parts/loop', 'job-details');?>
 							</div>
 
 						</li>

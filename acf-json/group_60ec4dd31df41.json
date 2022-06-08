@@ -3,13 +3,40 @@
     "title": "Pages",
     "fields": [
         {
+            "key": "field_62a0fb6cb83b7",
+            "label": "Solid Green BG Banner",
+            "name": "solid_green_bg_banner",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_60ec4e05b179d",
             "label": "Color Theme",
             "name": "color_theme",
             "type": "button_group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62a0fb6cb83b7",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -52,7 +79,15 @@
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62a0fb6cb83b7",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -86,21 +121,6 @@
                 "param": "page",
                 "operator": "!=",
                 "value": "73"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "71"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "75"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "681"
             }
         ]
     ],
@@ -115,5 +135,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1654638465
+    "modified": 1654718027
 }

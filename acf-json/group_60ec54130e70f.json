@@ -257,7 +257,7 @@
                             "min": 0,
                             "max": 0,
                             "layout": "block",
-                            "button_label": "",
+                            "button_label": "Add FAQ",
                             "sub_fields": [
                                 {
                                     "key": "field_629fed85d9541",
@@ -393,7 +393,7 @@
                             "min": 0,
                             "max": 0,
                             "layout": "block",
-                            "button_label": "",
+                            "button_label": "Add Card",
                             "sub_fields": [
                                 {
                                     "key": "field_629fca5b6f7d9",
@@ -1694,5 +1694,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1654650344
+    "modified": 1654718476
 }

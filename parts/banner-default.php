@@ -6,7 +6,11 @@
 				<h1><?php if( $obj->name == 'news_post' || $obj->post_type == 'news_post' ):?>
 						News
 					<?php else:
-						the_title();
+						if ( $title = get_field('alternative_page_title')):
+							echo $title;
+						else:
+							the_title();
+						endif;
 					endif;?>
 				</h1>
 			</div>

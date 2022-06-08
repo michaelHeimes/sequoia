@@ -16,9 +16,12 @@
 
 	<?php if ( get_row_layout() == 'current_openings' ) : 
 	
-		get_template_part('modules/current_openings');
+		get_template_part('modules/current_openings');?>
+		
+		<script async src="https://static.addtoany.com/menu/page.js"></script>
+
 	
-	endif;?>
+	<?php endif;?>
 	
 	<?php if ( get_row_layout() == 'faqs' ) : 
 	
