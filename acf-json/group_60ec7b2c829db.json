@@ -3,11 +3,11 @@
     "title": "Home Page Banner",
     "fields": [
         {
-            "key": "field_60ec7b3237845",
-            "label": "Background Image",
-            "name": "background_image",
-            "type": "image",
-            "instructions": "877px X 523px or 1754px X 876px.",
+            "key": "field_62a24f0085c74",
+            "label": "Background Images",
+            "name": "background_images",
+            "type": "gallery",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -17,7 +17,10 @@
             },
             "return_format": "array",
             "preview_size": "medium",
+            "insert": "append",
             "library": "all",
+            "min": "",
+            "max": "",
             "min_width": "",
             "min_height": "",
             "min_size": "",
@@ -124,5 +127,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1654559808
+    "modified": 1654805204
 }

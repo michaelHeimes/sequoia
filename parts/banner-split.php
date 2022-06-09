@@ -97,13 +97,25 @@
 							<?php endif; ?>
 						</div>
 						<div class="right cell small-12 tablet-7 xlarge-8 has-bg">
-							<?php 
-							$image = get_field('background_image');
-							if( !empty( $image ) ): ?>
-								<img class="hide-for-tablet" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-							<?php endif; ?>
-							<div class="bg show-for-tablet" style="background-image: url(<?php echo esc_url($image['url']); ?>)"></div>
-							</div>
+							<?php if (is_front_page()):
+								$banner_images = get_field('background_images');
+								if( $banner_images ):
+									$image = $banner_images[array_rand($banner_images)];?>
+									<img class="hide-for-tablet" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+									<div class="bg show-for-tablet" style="background-image: url(<?php echo esc_url($image['url']); ?>)"></div>
+								<?php endif;?>
+							<?php else:?>
+							
+								<?php 
+								$image = get_field('background_image');
+								if( !empty( $image ) ): ?>
+									<img class="hide-for-tablet" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+								<?php endif; ?>
+								<div class="bg show-for-tablet" style="background-image: url(<?php echo esc_url($image['url']); ?>)"></div>
+								</div>
+								
+							<? endif;?>
+							
 						</div>
 					</div>
 				</div>
