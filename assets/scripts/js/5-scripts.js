@@ -4,22 +4,7 @@
 // 	Accessibility Hack
 	$('.menu a[href="#"]').click(function(e) {
 		e.preventDefault ? e.preventDefault() : e.returnValue = false;
-	});	
-	
-/*
-	$(window).scroll(function() {    
-	    var scroll = $(window).scrollTop();
-	
-	     //>=, not <=
-	    if (scroll >= 10) {
-	        //clearHeader, not clearheader - caps H
-	        $("header.header").addClass("scrolled");
-	        
-	    } else {
-	        $("header.header").removeClass("scrolled");
-	    }
 	});
-*/
 	
 // 	Fixed Header Mobile Hack
 	$(document).on('click', 'a#menu-toggle', function(){
@@ -44,25 +29,6 @@
 	
 // 	Block Hacks
 	$('.wp-block-button__link').addClass('button');
-	
-	
-// 	Banner Parallax
-	// if ($('body').hasClass('home')) {
-	// 	
-	// 	var $bg = $('.banner').find('.bg');
-	// 	
-	//     gsap.to($bg , {
-	//       y: -200,
-	//       ease: "none",
-	//       scrollTrigger: {
-	//         trigger: '.banner' ,
-	//         start: -116,
-	// 		end: "bottom top",
-	//         scrub: true
-	//       }
-	//     });		
-	// }
-	
 
 // Three Column Stats Count Up
 	if ($('.three_column_stats').length) {
@@ -78,22 +44,7 @@
 			var $value1 = document.getElementById("set-1");
 			var $value2 = document.getElementById("set-2");
 			var $value3 = document.getElementById("set-3");
-			
-			
-/*
-			$('.three_column_stats .number').each(function(index, el) {
-				
-				gsap.fromTo(this, .5, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease: 'back.out(1.7)',
-					scrollTrigger: {
-					    trigger: '.three_column_stats',
-					    start: 'top 75%',
-						toggleActions: 'play none play reverse',
-					}
-				});			
-				
-			});
-*/
-						
+		
 			gsap.to(counter, 3, {
 				var: $num1,
 				onUpdate: function() {
@@ -219,7 +170,6 @@
 	  
 	}
 
-
 // 	Testimonial Sliders
 	if( $('.testimonial-slider').length ) {
 	
@@ -247,8 +197,11 @@
 	  
 	}
 	
+//  Job sharing copy link
 	if( $('.job-share').length ) {
+		
 		$('.job-share').each( function(i) {
+			
 			let $jobShare = $(this);
 			let $btn = $($jobShare).find('.button');
 			let $icons = $($jobShare).find('.a2a_kit');
@@ -268,31 +221,13 @@
 				let $copied = document.createElement("span");
 				$copied.innerText = "copied!";
 				$(this).append($copied);
-				$($copied).addClass('animate');
+				var tl = gsap.timeline();
+				tl.to($copied, {y: -5, autoAlpha: 1, duration: .5, ease: "power2.out"});
+				tl.to($copied, {y: -10, autoAlpha: 0, duration: .5, ease: "power2.out"});
 			});
 			
 		});
+		
 	}
-	
 
-/*
-	if ( $('.fade-in-up').length) {
-		
-		$('.fade-in-up').each(function(index, el) {
-			
-			gsap.fromTo(this, .5, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease: 'back.out(1.7)',
-				scrollTrigger: {
-				    trigger: this,
-				    start: 'top 75%',
-					endTrigger: this,
-					end: 'bottom 0%',
-					toggleActions: 'play none play reverse',
-				}
-			});			
-			
-		});
-		
-	}	
-*/
-	
 })(jQuery);

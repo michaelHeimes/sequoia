@@ -17,7 +17,7 @@
 					$faqs = get_sub_field('faqs');
 					foreach($faqs as $faq):
 					$question = $faq['question'];
-					$answer = $faq['question'];
+					$answer = $faq['answer'];
 				?>
 					<li class="accordion-item" data-accordion-item>
 							
