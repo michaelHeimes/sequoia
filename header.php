@@ -38,14 +38,15 @@
 	</head>
 			
 	<body <?php body_class(); ?>>
-				
-		<header class="header" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
-					
-			 <!-- This navs will be applied to the topbar, above all content 
-				  To see additional nav styles, visit the /parts directory -->
-			 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
-
-		</header> <!-- end .header -->
+		<div data-sticky-container>
+			<header class="header sticky" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
+						
+			 	<!-- This navs will be applied to the topbar, above all content 
+				  	To see additional nav styles, visit the /parts directory -->
+			 	<?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
+	
+			</header> <!-- end .header -->
+		</div>
 		
 		
 		<div class="off-canvas-wrapper">
