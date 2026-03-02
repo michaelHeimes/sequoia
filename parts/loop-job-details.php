@@ -4,7 +4,7 @@
 </div>
 <div class="apply-wrap">
 	<h4>Apply</h4>
-	<p>Send your resume to <a href="mailto:careers@sequioarg.com?subject=<?php the_title() ?>">careers@sequioarg.com</a></p>
+	<p>Send your resume to <a href="mailto:careers@sequoiarg.com?subject=<?php the_title() ?>">careers@sequoiarg.com</a></p>
 </div>
 <div class="job-share text-center">
 	<button class="button outline">share</button>

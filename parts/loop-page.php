@@ -7,7 +7,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
 
 	<?php 
-		if( get_field('solid_green_bg_banner') == 'true' ) {
+		if( get_field('solid_green_bg_banner') == 'true' || $obj->name == 'news_post' || $obj->post_type == 'news_post' ) {
 			get_template_part('parts/banner-default');
 		} else {
 			get_template_part('parts/banner-split');

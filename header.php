@@ -38,6 +38,7 @@
 	</head>
 			
 	<body <?php body_class(); ?>>
+				
 		<div data-sticky-container>
 			<header class="header sticky" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
 						
