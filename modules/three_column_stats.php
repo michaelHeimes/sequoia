@@ -7,13 +7,15 @@
 					
 					<?php if( have_rows('stat_1') ):?>
 					<div class="single-col cell">
-						<?php while ( have_rows('stat_1') ) : the_row();?>	
+						<?php while ( have_rows('stat_1') ) : the_row();
+							$num = get_sub_field('number') ?? null;		
+						?>	
 						
-						<div class="number fade-in-up"><span id="set-1">0</span></div>
+						<div class="number fade-in-up" data-number="<?=esc_attr( $num  );?>"><span id="set-1">0</span></div>
 					
 						<?php if( $text = get_sub_field('text') ):?>
 							<div class="text"><?php echo $text;?></div>
-						<?endif;?>
+						<?php endif;?>
 					
 						<?php endwhile;?>
 					</div>
@@ -21,13 +23,15 @@
 					
 					<?php if( have_rows('stat_2') ):?>
 					<div class="single-col cell">
-						<?php while ( have_rows('stat_2') ) : the_row();?>	
+						<?php while ( have_rows('stat_2') ) : the_row();
+							$num = get_sub_field('number') ?? null;	
+						?>	
 						
-						<div class="number fade-in-up"><span id="set-2">0</span></div>
+						<div class="number fade-in-up" data-number="<?=esc_attr( $num  );?>"><span id="set-2">0</span></div>
 					
 						<?php if( $text = get_sub_field('text') ):?>
 							<div class="text"><?php echo $text;?></div>
-						<?endif;?>
+						<?php endif;?>
 					
 						<?php endwhile;?>
 					</div>
@@ -35,13 +39,15 @@
 					
 					<?php if( have_rows('stat_3') ):?>
 					<div class="single-col cell">
-						<?php while ( have_rows('stat_3') ) : the_row();?>	
+						<?php while ( have_rows('stat_3') ) : the_row();
+							$num = get_sub_field('number') ?? null;			
+						?>	
 						
-						<div class="number fade-in-up"><span id="set-3">0</span></div>
+						<div class="number fade-in-up" data-number="<?=esc_attr( $num  );?>"><span id="set-3">0</span></div>
 					
 						<?php if( $text = get_sub_field('text') ):?>
 							<div class="text"><?php echo $text;?></div>
-						<?endif;?>
+						<?php endif;?>
 					
 						<?php endwhile;?>
 					</div>
